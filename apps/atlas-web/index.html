@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#061c33" />
+  <title>لوحة الوزير | أطلس ليبيا السياحي الذكي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="القائمة الرئيسية">
+      <div class="brand-block">
+        <div class="brand-mark">LSTA</div>
+        <div>
+          <strong>أطلس ليبيا السياحي الذكي</strong>
+          <span>من الرقم إلى القرار</span>
+        </div>
+      </div>
+
+      <nav class="nav-groups">
+        <section>
+          <h2>الإدارة الوطنية</h2>
+          <a class="nav-item active" href="#overview"><span>⌂</span> لوحة الوزير</a>
+          <a class="nav-item" href="#alerts"><span>◉</span> مركز التنبيهات</a>
+        </section>
+        <section>
+          <h2>الأطلس</h2>
+          <a class="nav-item" href="#map"><span>⌖</span> الخريطة الوطنية</a>
+          <a class="nav-item" href="#layers"><span>▦</span> الطبقات</a>
+          <a class="nav-item" href="#compare"><span>⇄</span> المقارنة المكانية</a>
+        </section>
+        <section>
+          <h2>المؤشرات</h2>
+          <a class="nav-item" href="#kpis"><span>▤</span> المؤشرات الوطنية</a>
+          <a class="nav-item" href="#quality"><span>✓</span> جودة البيانات</a>
+          <a class="nav-item" href="#investment"><span>◆</span> الاستثمار</a>
+        </section>
+        <section>
+          <h2>الذكاء الاصطناعي</h2>
+          <a class="nav-item" href="#assistant"><span>✦</span> مساعد الوزير</a>
+        </section>
+      </nav>
+
+      <div class="sidebar-footer">
+        <span class="status-dot"></span>
+        <div><strong>النظام يعمل</strong><small>آخر مزامنة: الآن</small></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="gov-title">
+          <span>دولة ليبيا</span>
+          <strong>وزارة السياحة والصناعات التقليدية</strong>
+          <small>مركز المعلومات والتوثيق السياحي</small>
+        </div>
+        <div class="top-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input id="globalSearch" type="search" placeholder="ابحث في المواقع والبلديات والمؤشرات..." />
+          </label>
+          <button class="icon-button" id="themeToggle" aria-label="تبديل المظهر">◐</button>
+          <button class="icon-button" aria-label="الإشعارات">♢<span class="badge">7</span></button>
+          <div class="user-card">
+            <div class="avatar">م</div>
+            <div><strong>مستخدم حكومي</strong><span>صلاحية تنفيذية</span></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="hero" id="overview">
+        <div>
+          <span class="eyebrow">المشهد السياحي الوطني</span>
+          <h1>لوحة الوزير التنفيذية</h1>
+          <p>قراءة موحدة للمواقع السياحية، جودة البيانات، الجاهزية المكانية، والتنبيهات ذات الأولوية.</p>
+        </div>
+        <div class="hero-actions">
+          <button class="secondary-button" id="printDashboard">طباعة التقرير</button>
+          <button class="primary-button" id="refreshDashboard">تحديث المؤشرات</button>
+        </div>
+      </section>
+
+      <section class="kpi-grid" id="kpis" aria-label="المؤشرات الرئيسية">
+        <article class="kpi-card"><span>إجمالي المواقع</span><strong data-kpi="8215">8,215</strong><small class="trend positive">↑ 6.2% عن الإصدار السابق</small></article>
+        <article class="kpi-card"><span>المواقع المعتمدة</span><strong data-kpi="7342">7,342</strong><small class="trend positive">89.4% من الإجمالي</small></article>
+        <article class="kpi-card"><span>قيد المراجعة</span><strong data-kpi="412">412</strong><small class="trend warning">تحتاج إجراءات تحقق</small></article>
+        <article class="kpi-card"><span>جودة البيانات</span><strong data-kpi="94.7">94.7%</strong><small class="trend positive">ضمن المستوى المستهدف</small></article>
+        <article class="kpi-card"><span>فرص الاستثمار</span><strong data-kpi="130">130</strong><small class="trend neutral">موزعة على عدة أقاليم</small></article>
+        <article class="kpi-card"><span>التنبيهات الحرجة</span><strong data-kpi="7">7</strong><small class="trend danger">تتطلب مراجعة فورية</small></article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel map-panel" id="map">
+          <div class="panel-header">
+            <div><span class="panel-kicker">GIS الوطني</span><h2>الخريطة التنفيذية لليبيا</h2></div>
+            <div class="segmented" role="group" aria-label="نوع العرض">
+              <button class="active" data-map-mode="sites">المواقع</button>
+              <button data-map-mode="quality">الجودة</button>
+              <button data-map-mode="investment">الاستثمار</button>
+            </div>
+          </div>
+          <div id="nationalMap" aria-label="خريطة ليبيا السياحية"></div>
+          <div class="map-legend">
+            <span><i class="legend-dot verified"></i> معتمد</span>
+            <span><i class="legend-dot review"></i> قيد المراجعة</span>
+            <span><i class="legend-dot critical"></i> حرج</span>
+          </div>
+        </article>
+
+        <aside class="panel alerts-panel" id="alerts">
+          <div class="panel-header"><div><span class="panel-kicker">الإنذار المبكر</span><h2>أولويات المتابعة</h2></div><button class="text-button">عرض الكل</button></div>
+          <div class="alert-list">
+            <article class="alert-item critical"><span class="alert-icon">!</span><div><strong>7 مواقع بإحداثيات غير صالحة</strong><small>تحتاج مراجعة GIS قبل الاعتماد</small></div><b>حرج</b></article>
+            <article class="alert-item warning"><span class="alert-icon">⌖</span><div><strong>1,310 سجلات بلا بلدية</strong><small>بانتظار الإسناد المكاني والمراجعة البشرية</small></div><b>عالٍ</b></article>
+            <article class="alert-item warning"><span class="alert-icon">◫</span><div><strong>طبقة القرى والمنتجعات</strong><small>اكتمال الحقول الأساسية 83.8%</small></div><b>عالٍ</b></article>
+            <article class="alert-item info"><span class="alert-icon">✓</span><div><strong>طبقة المدن القديمة جاهزة تجريبيًا</strong><small>أعلى اكتمال مسجل: 96.8%</small></div><b>جاهز</b></article>
+          </div>
+          <div class="quality-ring" id="quality">
+            <div class="ring" style="--value:94.7"><span>94.7%</span></div>
+            <div><strong>مؤشر الجودة الوطني</strong><small>الهدف المؤسسي: 95%</small></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="analytics-grid">
+        <article class="panel chart-panel">
+          <div class="panel-header"><div><span class="panel-kicker">توزيع وطني</span><h2>المواقع حسب الفئة</h2></div></div>
+          <div class="bar-chart" id="categoryChart"></div>
+        </article>
+        <article class="panel chart-panel">
+          <div class="panel-header"><div><span class="panel-kicker">حالة الاعتماد</span><h2>دورة التحقق</h2></div></div>
+          <div class="donut-wrap">
+            <div class="donut" aria-label="89.4 بالمئة معتمد"></div>
+            <div class="donut-legend">
+              <span><i class="legend-dot verified"></i> معتمد 89.4%</span>
+              <span><i class="legend-dot review"></i> مراجعة 5.0%</span>
+              <span><i class="legend-dot critical"></i> أخرى 5.6%</span>
+            </div>
+          </div>
+        </article>
+        <article class="panel activity-panel">
+          <div class="panel-header"><div><span class="panel-kicker">السجل المؤسسي</span><h2>آخر العمليات</h2></div></div>
+          <div class="activity-list">
+            <div><span>تم اعتماد التقرير الوطني الأول لجودة البيانات</span><time>منذ 12 دقيقة</time></div>
+            <div><span>تحديث قواعد إسناد البلديات عبر PostGIS</span><time>منذ 35 دقيقة</time></div>
+            <div><span>دمج خط الاستيراد المرحلي في الفرع الرئيسي</span><time>اليوم</time></div>
+            <div><span>إنشاء دفعة المدن القديمة المرشحة للتجربة</span><time>قيد التجهيز</time></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="assistant-panel" id="assistant">
+        <div class="assistant-copy">
+          <span class="assistant-symbol">✦</span>
+          <div><span class="panel-kicker">LSTA AI</span><h2>مساعد الوزير الذكي</h2><p>اسأل عن المواقع، البلديات، جودة البيانات أو فرص الاستثمار، وستظهر الإجابة مع المؤشرات والخريطة.</p></div>
+        </div>
+        <form id="assistantForm" class="assistant-form">
+          <input id="assistantInput" type="text" placeholder="مثال: اعرض أعلى البلديات في عدد الفنادق" required />
+          <button type="submit">تحليل</button>
+        </form>
+        <div id="assistantResponse" class="assistant-response" hidden></div>
+      </section>
+
+      <footer class="footer">
+        <span>منصة أطلس ليبيا السياحي الذكي — الإصدار الحكومي التجريبي 1.0</span>
+        <span>جميع المؤشرات المعروضة في هذه الواجهة نموذجية إلى حين الربط بقاعدة البيانات الوطنية.</span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
