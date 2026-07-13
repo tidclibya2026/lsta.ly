@@ -1,0 +1,115 @@
+version: 1.0
+project: Libya Smart Tourism Atlas
+owner: Tourism Information and Documentation Center
+coordinate_reference_system: EPSG:4326
+
+common:
+  source_id: Master_ID
+  name_ar: الاسم
+  name_en: الاسم الإنجليزي
+  municipality: البلدية
+  tourism_region: الإقليم السياحي
+  latitude: خط العرض
+  longitude: خط الطول
+  national_category: التصنيف الوطني
+  category_code: كود التصنيف
+  subcategory: التصنيف الفرعي
+  address: العنوان/الموقع
+  phone: الهاتف
+  web_or_social: رابط/فيسبوك
+  description: الوصف المختصر
+  verification_status: حالة التحقق
+  verification_priority: أولوية التحقق
+  source_type: نوع المصدر
+  source_files: ملفات المصدر
+
+layers:
+  hotels:
+    code: HOTEL
+    file_pattern: '*طبقة_الفنادق*.xlsx'
+    sheet: الفنادق
+    name_candidates: [اسم الفندق, الاسم, الاسم العربي]
+    expected_category: مرافق إيواء
+    default_subcategory: فندق
+
+  resorts_villages:
+    code: RESORT_VILLAGE
+    file_pattern: '*القرى_والمنتجعات*.xlsx'
+    sheet_candidates: [القرى والمنتجعات السياحية, القرى السياحية, المنتجعات]
+    name_candidates: [اسم القرية, اسم المنتجع, الاسم, الاسم العربي]
+    expected_category: مرافق إيواء
+
+  restaurants:
+    code: RESTAURANT
+    file_pattern: '*طبقة_المطاعم*.xlsx'
+    sheet: المطاعم
+    name_candidates: [اسم المطعم, الاسم, الاسم العربي]
+    expected_category: خدمات سياحية
+    default_subcategory: مطعم
+
+  cafes:
+    code: CAFE
+    file_pattern: '*طبقة_المقاهي*.xlsx'
+    sheet: المقاهي
+    name_candidates: [اسم المقهى, الاسم, الاسم العربي]
+    expected_category: خدمات سياحية
+    default_subcategory: مقهى
+
+  thematic_layers:
+    code: THEMATIC
+    file_pattern: '*طبقات_منفصلة_حسب_المحاور*.xlsx'
+    sheet_mode: each_sheet_is_layer
+    name_candidates: [اسم الموقع, الاسم, الاسم العربي]
+    category_from_sheet_name: true
+
+verification_status_mapping:
+  'معتمد': approved
+  'معتمد مبدئياً - مدمج من عدة مصادر': provisionally_approved
+  'مراجعة مكتبية': desk_review
+  'مراجعة دمج': merge_review
+  'تحقق ميداني': field_verification
+  'يحتاج تحقق ميداني': field_verification
+  'قيد المراجعة': under_review
+  'مسودة': draft
+
+quality_rules:
+  - code: Q001
+    field: source_id
+    severity: error
+    rule: required_and_unique_within_batch
+  - code: Q002
+    field: name_ar
+    severity: error
+    rule: required
+  - code: Q003
+    field: latitude
+    severity: critical
+    rule: numeric_between_19_and_34_5
+  - code: Q004
+    field: longitude
+    severity: critical
+    rule: numeric_between_9_and_26
+  - code: Q005
+    field: municipality
+    severity: warning
+    rule: required_or_spatially_assigned
+  - code: Q006
+    field: source_files
+    severity: error
+    rule: required
+  - code: Q007
+    field: verification_status
+    severity: warning
+    rule: mapped_enum
+  - code: Q008
+    field: duplicate
+    severity: warning
+    rule: normalized_name_and_distance_under_100m
+
+promotion_policy:
+  minimum_completeness_score: 75
+  blockers: [critical, unresolved_error]
+  requires_human_approval: true
+  automatic_merge_of_duplicates: false
+  preserve_source_record: true
+  publish_to_visit_libya_only_when: approved
