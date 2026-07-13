@@ -1,0 +1,18 @@
+{
+  "report_version": "1.0",
+  "report_date": "2026-07-14",
+  "method": "read-only quality profiling",
+  "notes": [
+    "quality_issues counts rule violations, not unique affected records",
+    "the thematic workbook contains overlapping aggregate layers and must not be summed as unique national sites"
+  ],
+  "primary_layers": [
+    {"layer":"hotels","records":614,"completeness_percent":88.4,"quality_issues":434,"invalid_coordinates":7,"missing_municipality":413,"exact_duplicate_suspects":0},
+    {"layer":"resorts_villages","records":366,"completeness_percent":83.8,"quality_issues":358,"invalid_coordinates":0,"missing_municipality":355,"exact_duplicate_suspects":3},
+    {"layer":"restaurants","records":348,"completeness_percent":86.9,"quality_issues":276,"invalid_coordinates":0,"missing_municipality":274,"exact_duplicate_suspects":2},
+    {"layer":"cafes","records":381,"completeness_percent":88.3,"quality_issues":268,"invalid_coordinates":0,"missing_municipality":268,"exact_duplicate_suspects":0}
+  ],
+  "recommended_pilot_order": ["old_cities", "museums", "cafes", "hotels", "restaurants", "resorts_villages"],
+  "publication_status": "not_approved_for_publication",
+  "next_gate": "human GIS and data-quality review before staging"
+}
