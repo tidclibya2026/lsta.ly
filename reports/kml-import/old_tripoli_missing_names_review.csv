@@ -1,0 +1,2361 @@
+﻿feature_id,geometry_type,folder_name,description_text,image_count,extended_data,review_category,proposed_name,proposed_name_confidence,review_status,reviewer_notes
+LSTA-OLD-TRIPOLI-000148,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 32343236
+code: 5122
+fclass: residential
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""32343236"",""code"":""5122"",""fclass"":""residential"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 32343236),low,pending_review,
+LSTA-OLD-TRIPOLI-000149,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 32517212
+code: 5112
+fclass: trunk
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""32517212"",""code"":""5112"",""fclass"":""trunk"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,طريق رئيسي (مرجع OSM 32517212),low,pending_review,
+LSTA-OLD-TRIPOLI-000154,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 33572246
+code: 5121
+fclass: unclassified
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""33572246"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 33572246),low,pending_review,
+LSTA-OLD-TRIPOLI-000159,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 97207668
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""97207668"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 97207668),low,pending_review,
+LSTA-OLD-TRIPOLI-000160,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 97207669
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""97207669"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 97207669),low,pending_review,
+LSTA-OLD-TRIPOLI-000162,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 100960679
+code: 5122
+fclass: residential
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""100960679"",""code"":""5122"",""fclass"":""residential"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 100960679),low,pending_review,
+LSTA-OLD-TRIPOLI-000163,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 100960682
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""100960682"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 100960682),low,pending_review,
+LSTA-OLD-TRIPOLI-000164,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 101241635
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""101241635"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 101241635),low,pending_review,
+LSTA-OLD-TRIPOLI-000165,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 101241638
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""101241638"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 101241638),low,pending_review,
+LSTA-OLD-TRIPOLI-000166,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 101241645
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""101241645"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 101241645),low,pending_review,
+LSTA-OLD-TRIPOLI-000167,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 101241651
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""101241651"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 101241651),low,pending_review,
+LSTA-OLD-TRIPOLI-000174,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 101398261
+code: 5121
+fclass: unclassified
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""101398261"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 101398261),low,pending_review,
+LSTA-OLD-TRIPOLI-000175,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 101399372
+code: 5121
+fclass: unclassified
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""101399372"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 101399372),low,pending_review,
+LSTA-OLD-TRIPOLI-000176,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 101399373
+code: 5121
+fclass: unclassified
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""101399373"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 101399373),low,pending_review,
+LSTA-OLD-TRIPOLI-000179,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545625
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545625"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102545625),low,pending_review,
+LSTA-OLD-TRIPOLI-000181,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545629
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545629"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 102545629),low,pending_review,
+LSTA-OLD-TRIPOLI-000182,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545630
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545630"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102545630),low,pending_review,
+LSTA-OLD-TRIPOLI-000183,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545632
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545632"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 102545632),low,pending_review,
+LSTA-OLD-TRIPOLI-000184,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545635
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545635"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102545635),low,pending_review,
+LSTA-OLD-TRIPOLI-000185,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545637
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545637"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102545637),low,pending_review,
+LSTA-OLD-TRIPOLI-000186,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545639
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545639"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 102545639),low,pending_review,
+LSTA-OLD-TRIPOLI-000187,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545640
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545640"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102545640),low,pending_review,
+LSTA-OLD-TRIPOLI-000188,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545641
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545641"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102545641),low,pending_review,
+LSTA-OLD-TRIPOLI-000189,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545645
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545645"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102545645),low,pending_review,
+LSTA-OLD-TRIPOLI-000190,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545646
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545646"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102545646),low,pending_review,
+LSTA-OLD-TRIPOLI-000191,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545647
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545647"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102545647),low,pending_review,
+LSTA-OLD-TRIPOLI-000192,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545648
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545648"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102545648),low,pending_review,
+LSTA-OLD-TRIPOLI-000193,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545649
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545649"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102545649),low,pending_review,
+LSTA-OLD-TRIPOLI-000194,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545650
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545650"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102545650),low,pending_review,
+LSTA-OLD-TRIPOLI-000195,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545651
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545651"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 102545651),low,pending_review,
+LSTA-OLD-TRIPOLI-000197,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545656
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545656"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102545656),low,pending_review,
+LSTA-OLD-TRIPOLI-000198,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545657
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545657"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 102545657),low,pending_review,
+LSTA-OLD-TRIPOLI-000199,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545658
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545658"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102545658),low,pending_review,
+LSTA-OLD-TRIPOLI-000200,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102545662
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102545662"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 102545662),low,pending_review,
+LSTA-OLD-TRIPOLI-000201,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 102561238
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""102561238"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 102561238),low,pending_review,
+LSTA-OLD-TRIPOLI-000202,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 105012549
+code: 5121
+fclass: unclassified
+oneway: F
+maxspeed: 0
+layer: 1
+bridge: T
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""105012549"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""1"",""bridge"":""T"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 105012549),low,pending_review,
+LSTA-OLD-TRIPOLI-000203,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 105012655
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""105012655"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 105012655),low,pending_review,
+LSTA-OLD-TRIPOLI-000204,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 127399211
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""127399211"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 127399211),low,pending_review,
+LSTA-OLD-TRIPOLI-000205,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 127538666
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""127538666"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 127538666),low,pending_review,
+LSTA-OLD-TRIPOLI-000206,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 183480715
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""183480715"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 183480715),low,pending_review,
+LSTA-OLD-TRIPOLI-000207,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 183480719
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""183480719"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 183480719),low,pending_review,
+LSTA-OLD-TRIPOLI-000208,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 183480723
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""183480723"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 183480723),low,pending_review,
+LSTA-OLD-TRIPOLI-000209,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 183480738
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""183480738"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 183480738),low,pending_review,
+LSTA-OLD-TRIPOLI-000211,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 185957223
+code: 5132
+fclass: trunk_link
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""185957223"",""code"":""5132"",""fclass"":""trunk_link"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,عنصر ضمن old_tripoli,low,pending_review,
+LSTA-OLD-TRIPOLI-000212,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 186095490
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""186095490"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 186095490),low,pending_review,
+LSTA-OLD-TRIPOLI-000213,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 186095492
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""186095492"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 186095492),low,pending_review,
+LSTA-OLD-TRIPOLI-000214,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 186095493
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""186095493"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 186095493),low,pending_review,
+LSTA-OLD-TRIPOLI-000216,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 289905662
+code: 5154
+fclass: path
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""289905662"",""code"":""5154"",""fclass"":""path"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار (مرجع OSM 289905662),low,pending_review,
+LSTA-OLD-TRIPOLI-000218,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 289905668
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""289905668"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 289905668),low,pending_review,
+LSTA-OLD-TRIPOLI-000219,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 289905670
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""289905670"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 289905670),low,pending_review,
+LSTA-OLD-TRIPOLI-000220,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 289905671
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""289905671"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 289905671),low,pending_review,
+LSTA-OLD-TRIPOLI-000221,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 289905672
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""289905672"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 289905672),low,pending_review,
+LSTA-OLD-TRIPOLI-000222,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 289905677
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""289905677"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 289905677),low,pending_review,
+LSTA-OLD-TRIPOLI-000225,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 378517545
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""378517545"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 378517545),low,pending_review,
+LSTA-OLD-TRIPOLI-000226,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 443990814
+code: 5121
+fclass: unclassified
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""443990814"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 443990814),low,pending_review,
+LSTA-OLD-TRIPOLI-000228,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 444466160
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""444466160"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 444466160),low,pending_review,
+LSTA-OLD-TRIPOLI-000232,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 444472214
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""444472214"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 444472214),low,pending_review,
+LSTA-OLD-TRIPOLI-000233,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 444472216
+code: 5121
+fclass: unclassified
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""444472216"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 444472216),low,pending_review,
+LSTA-OLD-TRIPOLI-000237,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 512653552
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""512653552"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 512653552),low,pending_review,
+LSTA-OLD-TRIPOLI-000238,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 512653554
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""512653554"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 512653554),low,pending_review,
+LSTA-OLD-TRIPOLI-000239,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 512653556
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""512653556"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 512653556),low,pending_review,
+LSTA-OLD-TRIPOLI-000240,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 512653558
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""512653558"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 512653558),low,pending_review,
+LSTA-OLD-TRIPOLI-000241,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 512653560
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""512653560"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 512653560),low,pending_review,
+LSTA-OLD-TRIPOLI-000242,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 512653562
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""512653562"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 512653562),low,pending_review,
+LSTA-OLD-TRIPOLI-000243,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 512653564
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""512653564"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 512653564),low,pending_review,
+LSTA-OLD-TRIPOLI-000244,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 512653565
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""512653565"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 512653565),low,pending_review,
+LSTA-OLD-TRIPOLI-000245,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 512653567
+code: 5121
+fclass: unclassified
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""512653567"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 512653567),low,pending_review,
+LSTA-OLD-TRIPOLI-000246,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 515954309
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""515954309"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 515954309),low,pending_review,
+LSTA-OLD-TRIPOLI-000247,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 515954310
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""515954310"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 515954310),low,pending_review,
+LSTA-OLD-TRIPOLI-000248,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 515954311
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""515954311"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 515954311),low,pending_review,
+LSTA-OLD-TRIPOLI-000249,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 515954312
+code: 5121
+fclass: unclassified
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""515954312"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 515954312),low,pending_review,
+LSTA-OLD-TRIPOLI-000250,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 515954313
+code: 5121
+fclass: unclassified
+oneway: F
+maxspeed: 0
+layer: 1
+bridge: T
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""515954313"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""1"",""bridge"":""T"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 515954313),low,pending_review,
+LSTA-OLD-TRIPOLI-000251,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 515954314
+code: 5121
+fclass: unclassified
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""515954314"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 515954314),low,pending_review,
+LSTA-OLD-TRIPOLI-000252,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 515954315
+code: 5121
+fclass: unclassified
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""515954315"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 515954315),low,pending_review,
+LSTA-OLD-TRIPOLI-000253,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 515954317
+code: 5121
+fclass: unclassified
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""515954317"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 515954317),low,pending_review,
+LSTA-OLD-TRIPOLI-000254,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 515954318
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""515954318"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 515954318),low,pending_review,
+LSTA-OLD-TRIPOLI-000255,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 515954320
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""515954320"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 515954320),low,pending_review,
+LSTA-OLD-TRIPOLI-000256,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 565132164
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""565132164"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 565132164),low,pending_review,
+LSTA-OLD-TRIPOLI-000257,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 577258963
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""577258963"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 577258963),low,pending_review,
+LSTA-OLD-TRIPOLI-000259,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 652524787
+code: 5132
+fclass: trunk_link
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""652524787"",""code"":""5132"",""fclass"":""trunk_link"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,عنصر ضمن old_tripoli,low,pending_review,
+LSTA-OLD-TRIPOLI-000260,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 652524788
+code: 5121
+fclass: unclassified
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""652524788"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 652524788),low,pending_review,
+LSTA-OLD-TRIPOLI-000261,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 668507588
+code: 5121
+fclass: unclassified
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""668507588"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 668507588),low,pending_review,
+LSTA-OLD-TRIPOLI-000262,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671241208
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671241208"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 671241208),low,pending_review,
+LSTA-OLD-TRIPOLI-000263,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671267147
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671267147"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 671267147),low,pending_review,
+LSTA-OLD-TRIPOLI-000266,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671756070
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671756070"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 671756070),low,pending_review,
+LSTA-OLD-TRIPOLI-000267,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671758192
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671758192"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 671758192),low,pending_review,
+LSTA-OLD-TRIPOLI-000268,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671759389
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671759389"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 671759389),low,pending_review,
+LSTA-OLD-TRIPOLI-000269,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671763185
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671763185"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 671763185),low,pending_review,
+LSTA-OLD-TRIPOLI-000270,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671763186
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671763186"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 671763186),low,pending_review,
+LSTA-OLD-TRIPOLI-000271,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671777701
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671777701"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 671777701),low,pending_review,
+LSTA-OLD-TRIPOLI-000272,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671813791
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671813791"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 671813791),low,pending_review,
+LSTA-OLD-TRIPOLI-000273,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671813792
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671813792"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 671813792),low,pending_review,
+LSTA-OLD-TRIPOLI-000274,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671843752
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671843752"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 671843752),low,pending_review,
+LSTA-OLD-TRIPOLI-000275,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671855212
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671855212"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 671855212),low,pending_review,
+LSTA-OLD-TRIPOLI-000276,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671855214
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671855214"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 671855214),low,pending_review,
+LSTA-OLD-TRIPOLI-000279,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671855225
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671855225"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 671855225),low,pending_review,
+LSTA-OLD-TRIPOLI-000280,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671855227
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671855227"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 671855227),low,pending_review,
+LSTA-OLD-TRIPOLI-000281,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671872418
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671872418"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 671872418),low,pending_review,
+LSTA-OLD-TRIPOLI-000282,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671872419
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671872419"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 671872419),low,pending_review,
+LSTA-OLD-TRIPOLI-000283,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671872420
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671872420"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 671872420),low,pending_review,
+LSTA-OLD-TRIPOLI-000285,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671963470
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671963470"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 671963470),low,pending_review,
+LSTA-OLD-TRIPOLI-000287,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671980725
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671980725"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 671980725),low,pending_review,
+LSTA-OLD-TRIPOLI-000288,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671980726
+code: 5121
+fclass: unclassified
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671980726"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 671980726),low,pending_review,
+LSTA-OLD-TRIPOLI-000289,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 671980727
+code: 5124
+fclass: pedestrian
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""671980727"",""code"":""5124"",""fclass"":""pedestrian"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,عنصر ضمن old_tripoli,low,pending_review,
+LSTA-OLD-TRIPOLI-000291,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 683228300
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""683228300"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 683228300),low,pending_review,
+LSTA-OLD-TRIPOLI-000292,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 683228301
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""683228301"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 683228301),low,pending_review,
+LSTA-OLD-TRIPOLI-000293,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 683228302
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""683228302"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 683228302),low,pending_review,
+LSTA-OLD-TRIPOLI-000294,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 683228303
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""683228303"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 683228303),low,pending_review,
+LSTA-OLD-TRIPOLI-000295,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 683228304
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""683228304"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 683228304),low,pending_review,
+LSTA-OLD-TRIPOLI-000296,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 683228305
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""683228305"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 683228305),low,pending_review,
+LSTA-OLD-TRIPOLI-000297,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 766736294
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""766736294"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 766736294),low,pending_review,
+LSTA-OLD-TRIPOLI-000298,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795523140
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795523140"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795523140),low,pending_review,
+LSTA-OLD-TRIPOLI-000300,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795525637
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795525637"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795525637),low,pending_review,
+LSTA-OLD-TRIPOLI-000301,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795526932
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795526932"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795526932),low,pending_review,
+LSTA-OLD-TRIPOLI-000302,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795526933
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795526933"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795526933),low,pending_review,
+LSTA-OLD-TRIPOLI-000303,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795527224
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795527224"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795527224),low,pending_review,
+LSTA-OLD-TRIPOLI-000304,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795527225
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795527225"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795527225),low,pending_review,
+LSTA-OLD-TRIPOLI-000305,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795527617
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795527617"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795527617),low,pending_review,
+LSTA-OLD-TRIPOLI-000306,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795527618
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795527618"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795527618),low,pending_review,
+LSTA-OLD-TRIPOLI-000307,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795527619
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795527619"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795527619),low,pending_review,
+LSTA-OLD-TRIPOLI-000308,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795527620
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795527620"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795527620),low,pending_review,
+LSTA-OLD-TRIPOLI-000309,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795527621
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795527621"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795527621),low,pending_review,
+LSTA-OLD-TRIPOLI-000310,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795527622
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795527622"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795527622),low,pending_review,
+LSTA-OLD-TRIPOLI-000311,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795527623
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795527623"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795527623),low,pending_review,
+LSTA-OLD-TRIPOLI-000312,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795527624
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795527624"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795527624),low,pending_review,
+LSTA-OLD-TRIPOLI-000313,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795527625
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795527625"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795527625),low,pending_review,
+LSTA-OLD-TRIPOLI-000314,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795527626
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795527626"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795527626),low,pending_review,
+LSTA-OLD-TRIPOLI-000315,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795527627
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795527627"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795527627),low,pending_review,
+LSTA-OLD-TRIPOLI-000316,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795527628
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795527628"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795527628),low,pending_review,
+LSTA-OLD-TRIPOLI-000317,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795528785
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795528785"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795528785),low,pending_review,
+LSTA-OLD-TRIPOLI-000318,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795529639
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795529639"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795529639),low,pending_review,
+LSTA-OLD-TRIPOLI-000319,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795529666
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795529666"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795529666),low,pending_review,
+LSTA-OLD-TRIPOLI-000320,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795529667
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795529667"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795529667),low,pending_review,
+LSTA-OLD-TRIPOLI-000321,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795529668
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795529668"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795529668),low,pending_review,
+LSTA-OLD-TRIPOLI-000322,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795531231
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795531231"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795531231),low,pending_review,
+LSTA-OLD-TRIPOLI-000323,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795531232
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795531232"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795531232),low,pending_review,
+LSTA-OLD-TRIPOLI-000324,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795531331
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795531331"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795531331),low,pending_review,
+LSTA-OLD-TRIPOLI-000325,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795531332
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795531332"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795531332),low,pending_review,
+LSTA-OLD-TRIPOLI-000326,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 795531335
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""795531335"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 795531335),low,pending_review,
+LSTA-OLD-TRIPOLI-000327,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 796940738
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""796940738"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 796940738),low,pending_review,
+LSTA-OLD-TRIPOLI-000328,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 930425965
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""930425965"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 930425965),low,pending_review,
+LSTA-OLD-TRIPOLI-000329,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 930425966
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""930425966"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 930425966),low,pending_review,
+LSTA-OLD-TRIPOLI-000330,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 930425967
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""930425967"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 930425967),low,pending_review,
+LSTA-OLD-TRIPOLI-000331,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 930426363
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""930426363"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 930426363),low,pending_review,
+LSTA-OLD-TRIPOLI-000332,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 937323937
+code: 5124
+fclass: pedestrian
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""937323937"",""code"":""5124"",""fclass"":""pedestrian"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,عنصر ضمن old_tripoli,low,pending_review,
+LSTA-OLD-TRIPOLI-000333,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 967726336
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""967726336"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 967726336),low,pending_review,
+LSTA-OLD-TRIPOLI-000334,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 975783733
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""975783733"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 975783733),low,pending_review,
+LSTA-OLD-TRIPOLI-000336,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1006948333
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1006948333"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1006948333),low,pending_review,
+LSTA-OLD-TRIPOLI-000337,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1006948335
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: -1
+bridge: F
+tunnel: T",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1006948335"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""-1"",""bridge"":""F"",""tunnel"":""T""}",مسار,ممر مشاة (مرجع OSM 1006948335),low,pending_review,
+LSTA-OLD-TRIPOLI-000338,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1006948336
+code: 5124
+fclass: pedestrian
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1006948336"",""code"":""5124"",""fclass"":""pedestrian"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,عنصر ضمن old_tripoli,low,pending_review,
+LSTA-OLD-TRIPOLI-000339,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1006948337
+code: 5124
+fclass: pedestrian
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1006948337"",""code"":""5124"",""fclass"":""pedestrian"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,عنصر ضمن old_tripoli,low,pending_review,
+LSTA-OLD-TRIPOLI-000340,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1006948339
+code: 5124
+fclass: pedestrian
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1006948339"",""code"":""5124"",""fclass"":""pedestrian"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,عنصر ضمن old_tripoli,low,pending_review,
+LSTA-OLD-TRIPOLI-000341,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1029575819
+code: 5154
+fclass: path
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1029575819"",""code"":""5154"",""fclass"":""path"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار (مرجع OSM 1029575819),low,pending_review,
+LSTA-OLD-TRIPOLI-000342,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1030927227
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1030927227"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 1030927227),low,pending_review,
+LSTA-OLD-TRIPOLI-000343,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1046879951
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1046879951"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1046879951),low,pending_review,
+LSTA-OLD-TRIPOLI-000344,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067491580
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067491580"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1067491580),low,pending_review,
+LSTA-OLD-TRIPOLI-000345,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067491581
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067491581"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1067491581),low,pending_review,
+LSTA-OLD-TRIPOLI-000346,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067491582
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067491582"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1067491582),low,pending_review,
+LSTA-OLD-TRIPOLI-000347,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067491583
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067491583"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1067491583),low,pending_review,
+LSTA-OLD-TRIPOLI-000348,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067491584
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067491584"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1067491584),low,pending_review,
+LSTA-OLD-TRIPOLI-000349,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067491585
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067491585"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1067491585),low,pending_review,
+LSTA-OLD-TRIPOLI-000350,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067491586
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067491586"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1067491586),low,pending_review,
+LSTA-OLD-TRIPOLI-000351,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067491587
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067491587"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 1067491587),low,pending_review,
+LSTA-OLD-TRIPOLI-000353,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067491589
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067491589"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1067491589),low,pending_review,
+LSTA-OLD-TRIPOLI-000354,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067491590
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067491590"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1067491590),low,pending_review,
+LSTA-OLD-TRIPOLI-000355,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067491591
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067491591"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1067491591),low,pending_review,
+LSTA-OLD-TRIPOLI-000356,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067491592
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067491592"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1067491592),low,pending_review,
+LSTA-OLD-TRIPOLI-000357,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067493155
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067493155"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1067493155),low,pending_review,
+LSTA-OLD-TRIPOLI-000358,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067493156
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067493156"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1067493156),low,pending_review,
+LSTA-OLD-TRIPOLI-000359,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1067493157
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1067493157"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1067493157),low,pending_review,
+LSTA-OLD-TRIPOLI-000360,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1069389294
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1069389294"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1069389294),low,pending_review,
+LSTA-OLD-TRIPOLI-000362,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1069390203
+code: 5121
+fclass: unclassified
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1069390203"",""code"":""5121"",""fclass"":""unclassified"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار غير مصنف (مرجع OSM 1069390203),low,pending_review,
+LSTA-OLD-TRIPOLI-000363,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1080287057
+code: 5154
+fclass: path
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1080287057"",""code"":""5154"",""fclass"":""path"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار (مرجع OSM 1080287057),low,pending_review,
+LSTA-OLD-TRIPOLI-000364,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1086682609
+code: 5124
+fclass: pedestrian
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1086682609"",""code"":""5124"",""fclass"":""pedestrian"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,عنصر ضمن old_tripoli,low,pending_review,
+LSTA-OLD-TRIPOLI-000365,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1095955674
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1095955674"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1095955674),low,pending_review,
+LSTA-OLD-TRIPOLI-000367,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1105449969
+code: 5112
+fclass: trunk
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1105449969"",""code"":""5112"",""fclass"":""trunk"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,طريق رئيسي (مرجع OSM 1105449969),low,pending_review,
+LSTA-OLD-TRIPOLI-000370,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1120522246
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1120522246"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1120522246),low,pending_review,
+LSTA-OLD-TRIPOLI-000371,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1120522247
+code: 5155
+fclass: steps
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1120522247"",""code"":""5155"",""fclass"":""steps"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,عنصر ضمن old_tripoli,low,pending_review,
+LSTA-OLD-TRIPOLI-000372,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1120522248
+code: 5155
+fclass: steps
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1120522248"",""code"":""5155"",""fclass"":""steps"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,عنصر ضمن old_tripoli,low,pending_review,
+LSTA-OLD-TRIPOLI-000373,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1120522249
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1120522249"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1120522249),low,pending_review,
+LSTA-OLD-TRIPOLI-000374,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1120522250
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1120522250"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1120522250),low,pending_review,
+LSTA-OLD-TRIPOLI-000375,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1120522251
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1120522251"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1120522251),low,pending_review,
+LSTA-OLD-TRIPOLI-000376,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1120522255
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1120522255"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1120522255),low,pending_review,
+LSTA-OLD-TRIPOLI-000377,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1120522256
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1120522256"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1120522256),low,pending_review,
+LSTA-OLD-TRIPOLI-000378,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1120522258
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1120522258"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1120522258),low,pending_review,
+LSTA-OLD-TRIPOLI-000379,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1120522259
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1120522259"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1120522259),low,pending_review,
+LSTA-OLD-TRIPOLI-000380,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1120522260
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1120522260"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1120522260),low,pending_review,
+LSTA-OLD-TRIPOLI-000381,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1120522262
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1120522262"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1120522262),low,pending_review,
+LSTA-OLD-TRIPOLI-000382,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1125603877
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1125603877"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 1125603877),low,pending_review,
+LSTA-OLD-TRIPOLI-000383,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1125603885
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1125603885"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1125603885),low,pending_review,
+LSTA-OLD-TRIPOLI-000384,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1125603886
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1125603886"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1125603886),low,pending_review,
+LSTA-OLD-TRIPOLI-000385,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1125603887
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1125603887"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1125603887),low,pending_review,
+LSTA-OLD-TRIPOLI-000386,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1125603888
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1125603888"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1125603888),low,pending_review,
+LSTA-OLD-TRIPOLI-000387,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1125603889
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1125603889"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1125603889),low,pending_review,
+LSTA-OLD-TRIPOLI-000388,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1125603890
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1125603890"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1125603890),low,pending_review,
+LSTA-OLD-TRIPOLI-000389,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1125603891
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1125603891"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1125603891),low,pending_review,
+LSTA-OLD-TRIPOLI-000390,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1125603892
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1125603892"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1125603892),low,pending_review,
+LSTA-OLD-TRIPOLI-000391,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1125603893
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1125603893"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1125603893),low,pending_review,
+LSTA-OLD-TRIPOLI-000393,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1250713853
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1250713853"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1250713853),low,pending_review,
+LSTA-OLD-TRIPOLI-000394,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1250713854
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1250713854"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1250713854),low,pending_review,
+LSTA-OLD-TRIPOLI-000395,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1250713855
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1250713855"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1250713855),low,pending_review,
+LSTA-OLD-TRIPOLI-000396,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1250713856
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1250713856"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1250713856),low,pending_review,
+LSTA-OLD-TRIPOLI-000397,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1305186183
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1305186183"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1305186183),low,pending_review,
+LSTA-OLD-TRIPOLI-000398,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1417133050
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1417133050"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1417133050),low,pending_review,
+LSTA-OLD-TRIPOLI-000399,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1417133835
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1417133835"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1417133835),low,pending_review,
+LSTA-OLD-TRIPOLI-000400,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1417133836
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1417133836"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1417133836),low,pending_review,
+LSTA-OLD-TRIPOLI-000401,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1431240633
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1431240633"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1431240633),low,pending_review,
+LSTA-OLD-TRIPOLI-000402,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1431240634
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1431240634"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1431240634),low,pending_review,
+LSTA-OLD-TRIPOLI-000403,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1431240635
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1431240635"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1431240635),low,pending_review,
+LSTA-OLD-TRIPOLI-000404,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1431240636
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1431240636"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1431240636),low,pending_review,
+LSTA-OLD-TRIPOLI-000405,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1431240637
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1431240637"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1431240637),low,pending_review,
+LSTA-OLD-TRIPOLI-000406,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1431240638
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1431240638"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1431240638),low,pending_review,
+LSTA-OLD-TRIPOLI-000407,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1431240639
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1431240639"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1431240639),low,pending_review,
+LSTA-OLD-TRIPOLI-000408,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1431246701
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1431246701"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1431246701),low,pending_review,
+LSTA-OLD-TRIPOLI-000409,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1431943773
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1431943773"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 1431943773),low,pending_review,
+LSTA-OLD-TRIPOLI-000410,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1431943774
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1431943774"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 1431943774),low,pending_review,
+LSTA-OLD-TRIPOLI-000411,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1431943775
+code: 5122
+fclass: residential
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1431943775"",""code"":""5122"",""fclass"":""residential"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار سكني (مرجع OSM 1431943775),low,pending_review,
+LSTA-OLD-TRIPOLI-000412,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1432517236
+code: 5114
+fclass: secondary
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1432517236"",""code"":""5114"",""fclass"":""secondary"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,طريق ثانوي (مرجع OSM 1432517236),low,pending_review,
+LSTA-OLD-TRIPOLI-000413,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1432517237
+code: 5114
+fclass: secondary
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1432517237"",""code"":""5114"",""fclass"":""secondary"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,طريق ثانوي (مرجع OSM 1432517237),low,pending_review,
+LSTA-OLD-TRIPOLI-000414,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1432784555
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1432784555"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1432784555),low,pending_review,
+LSTA-OLD-TRIPOLI-000415,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1432784556
+code: 5153
+fclass: footway
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1432784556"",""code"":""5153"",""fclass"":""footway"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,ممر مشاة (مرجع OSM 1432784556),low,pending_review,
+LSTA-OLD-TRIPOLI-000416,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513029807
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513029807"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513029807),low,pending_review,
+LSTA-OLD-TRIPOLI-000417,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513029808
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513029808"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513029808),low,pending_review,
+LSTA-OLD-TRIPOLI-000418,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513029809
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513029809"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513029809),low,pending_review,
+LSTA-OLD-TRIPOLI-000419,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513029810
+code: 5141
+fclass: service
+oneway: F
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513029810"",""code"":""5141"",""fclass"":""service"",""oneway"":""F"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513029810),low,pending_review,
+LSTA-OLD-TRIPOLI-000420,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513029811
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513029811"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513029811),low,pending_review,
+LSTA-OLD-TRIPOLI-000421,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513029812
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513029812"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513029812),low,pending_review,
+LSTA-OLD-TRIPOLI-000422,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513038668
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513038668"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513038668),low,pending_review,
+LSTA-OLD-TRIPOLI-000423,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513038669
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513038669"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513038669),low,pending_review,
+LSTA-OLD-TRIPOLI-000424,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513038670
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513038670"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513038670),low,pending_review,
+LSTA-OLD-TRIPOLI-000425,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513038671
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513038671"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513038671),low,pending_review,
+LSTA-OLD-TRIPOLI-000426,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513038672
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513038672"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513038672),low,pending_review,
+LSTA-OLD-TRIPOLI-000427,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513038673
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513038673"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513038673),low,pending_review,
+LSTA-OLD-TRIPOLI-000428,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513038674
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513038674"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513038674),low,pending_review,
+LSTA-OLD-TRIPOLI-000429,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513038675
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513038675"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513038675),low,pending_review,
+LSTA-OLD-TRIPOLI-000430,LineString,old_tripoli,"الوصف:
+area:
+osm_id: 1513038676
+code: 5141
+fclass: service
+oneway: B
+maxspeed: 0
+layer: 0
+bridge: F
+tunnel: F",0,"{""الوصف"":"""",""area"":"""",""osm_id"":""1513038676"",""code"":""5141"",""fclass"":""service"",""oneway"":""B"",""maxspeed"":""0"",""layer"":""0"",""bridge"":""F"",""tunnel"":""F""}",مسار,مسار خدمة (مرجع OSM 1513038676),low,pending_review,

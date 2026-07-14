@@ -1,0 +1,2 @@
+import { useId, type InputHTMLAttributes } from "react";
+export function Checkbox({ label, description, ...props }: Omit<InputHTMLAttributes<HTMLInputElement>, "type"> & { label: string; description?: string }) { const id = useId(); return <label className="dsCheckbox" htmlFor={id}><input id={id} type="checkbox" {...props} /><span><b>{label}</b>{description && <small>{description}</small>}</span></label>; }

@@ -1,0 +1,2 @@
+import { EmptyState } from "@/components/feedback/EmptyState";
+export function SiteQualityPanel({ snapshots }: { snapshots: Array<Record<string, unknown>> }) { return snapshots.length?<div className="registryCards">{snapshots.map((item,index)=><article className="dsCard" key={String(item.id||index)}><strong>{String(item.overall_score)}/100</strong><p>{String(item.calculated_by||"")}</p><pre className="reviewCode">{JSON.stringify({critical_issues:item.critical_issues,warnings:item.warnings},null,2)}</pre></article>)}</div>:<EmptyState title="لا توجد لقطات جودة محفوظة"/>; }

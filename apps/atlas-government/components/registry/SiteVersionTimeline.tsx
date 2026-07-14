@@ -1,0 +1,2 @@
+import { EmptyState } from "@/components/feedback/EmptyState"; import type { SiteVersion } from "@/lib/api/registry-types";
+export function SiteVersionTimeline({ items }: { items: SiteVersion[] }) { return items.length?<ol className="registryTimeline">{items.map(x=><li key={x.version_number}><strong>الإصدار {x.version_number}</strong><p>{x.change_summary}</p><time>{new Date(x.created_at).toLocaleString("ar-LY")}</time></li>)}</ol>:<EmptyState title="لا توجد إصدارات سابقة"/>; }

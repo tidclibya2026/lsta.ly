@@ -1,0 +1,2 @@
+import { EmptyState } from "@/components/feedback/EmptyState";
+export function SiteAuditTimeline({ items }: { items: Array<{id:string;action:string;details:Record<string,unknown>;created_at:string}> }) { return items.length?<div className="registryAudit">{items.map(item=><article key={item.id}><strong>{item.action}</strong><time>{new Date(item.created_at).toLocaleString("ar-LY")}</time><pre className="reviewCode">{JSON.stringify(item.details,null,2)}</pre></article>)}</div>:<EmptyState title="لا يوجد سجل تدقيق"/>; }

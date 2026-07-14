@@ -1,0 +1,3 @@
+import type { ButtonHTMLAttributes, ReactNode } from "react";
+export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> { label: string; children: ReactNode }
+export function IconButton({ label, children, className = "", ...props }: IconButtonProps) { return <button className={`dsIconButton ${className}`} aria-label={label} title={label} {...props}>{children}</button>; }

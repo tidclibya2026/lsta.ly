@@ -1,0 +1,2 @@
+export interface LegendItem { id: string; label: string; color: string; symbol?: "point" | "line" | "polygon" }
+export function MapLegend({ title = "مفتاح الخريطة", items }: { title?: string; items: LegendItem[] }) { return <div className="dsMapLegend" aria-label={title}><strong>{title}</strong>{items.map((item) => <span key={item.id}><i className={item.symbol ?? "point"} style={{ "--legend-color": item.color } as React.CSSProperties} />{item.label}</span>)}</div>; }

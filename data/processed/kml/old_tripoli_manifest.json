@@ -1,0 +1,21 @@
+{
+  "source_id": "SRC-2026-00001",
+  "source_file": "المدينة القديمة _طرابلس.kml",
+  "source_sha256": "701dc1d488b399805f474505cfcc829a56d2a64cdbd2b976c6f4aff0e5e2d188",
+  "imported_at": "2026-07-14T09:18:35.418698Z",
+  "feature_count": 430,
+  "point_count": 135,
+  "line_count": 285,
+  "polygon_count": 10,
+  "image_count": 380,
+  "unnamed_count": 236,
+  "without_description_count": 0,
+  "invalid_coordinate_count": 0,
+  "named_features": 194,
+  "unnamed_points": 0,
+  "unnamed_lines": 236,
+  "unnamed_polygons": 0,
+  "features_with_images": 135,
+  "features_with_extended_data": 430,
+  "status": "success_with_issues"
+}

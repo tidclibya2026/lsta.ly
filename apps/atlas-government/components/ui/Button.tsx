@@ -1,0 +1,3 @@
+import type { ButtonHTMLAttributes, ReactNode } from "react";
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> { variant?: "primary" | "secondary" | "ghost" | "danger"; size?: "sm" | "md" | "lg"; loading?: boolean; children: ReactNode }
+export function Button({ variant = "primary", size = "md", loading, disabled, className = "", children, ...props }: ButtonProps) { return <button className={`dsButton ${variant} ${size} ${className}`} disabled={disabled || loading} aria-busy={loading || undefined} {...props}>{loading && <span className="dsButtonSpinner" aria-hidden="true" />}{children}</button>; }

@@ -1,0 +1,25 @@
+# ملفات GIS الخام والحساسة — لا تُرفع إلى المستودع العام
+data/raw/**/*.kml
+data/raw/**/*.kmz
+data/raw/**/*.[jJ][pP][gG]
+data/raw/**/*.[jJ][pP][eE][gG]
+data/raw/**/*.[pP][nN][gG]
+data/raw/**/*.[gG][iI][fF]
+data/raw/**/*.[wW][eE][bB][pP]
+data/raw/**/*.[bB][mM][pP]
+
+# مخرجات وأدوات Python المحلية
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# تطبيق الحكومة
+apps/atlas-government/node_modules/
+apps/atlas-government/.next/
+apps/atlas-government/tsconfig.tsbuildinfo
+
+# أسرار البنية التحتية المحلية
+infrastructure/.env
+services/atlas-api/.env

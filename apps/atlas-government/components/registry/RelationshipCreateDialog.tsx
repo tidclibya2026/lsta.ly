@@ -1,0 +1,2 @@
+import { Dialog } from "@/components/ui/Dialog"; import { Button } from "@/components/ui/Button";
+export function RelationshipCreateDialog({open,count,onConfirm,onClose}:{open:boolean;count:number;onConfirm:()=>void;onClose:()=>void}){return <Dialog open={open} title="إنشاء علاقات مرشحة" onClose={onClose}><p>سيتم إنشاء ما يصل إلى {count} علاقات بحالة pending_review دون اعتماد تلقائي.</p><Button onClick={onConfirm}>تأكيد الإنشاء</Button></Dialog>}

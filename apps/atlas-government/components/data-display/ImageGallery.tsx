@@ -1,0 +1,1 @@
+export function ImageGallery({ images, alt }: { images: string[]; alt: string }) { if (!images.length) return null; return <div className="dsGallery" aria-label="معرض الصور">{images.map((src, index) => <img src={src} alt={`${alt} ${index + 1}`} loading="lazy" referrerPolicy="no-referrer" key={src} />)}</div>; }

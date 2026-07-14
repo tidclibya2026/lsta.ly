@@ -1,0 +1,4 @@
+"use client";
+import { useEffect, useRef, type ReactNode } from "react";
+import { IconButton } from "./IconButton";
+export function Dialog({ open, title, children, onClose }: { open: boolean; title: string; children: ReactNode; onClose: () => void }) { const ref = useRef<HTMLDivElement>(null); useEffect(() => { if (!open) return; ref.current?.focus(); const key = (event: KeyboardEvent) => event.key === "Escape" && onClose(); document.addEventListener("keydown", key); return () => document.removeEventListener("keydown", key); }, [open, onClose]); if (!open) return null; return <div className="dsOverlay" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && onClose()}><div className="dsDialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title" tabIndex={-1} ref={ref}><header><h2 id="dialog-title">{title}</h2><IconButton label="إغلاق" onClick={onClose}>×</IconButton></header>{children}</div></div>; }

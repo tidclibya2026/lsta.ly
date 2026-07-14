@@ -1,0 +1,1 @@
+export function LoadingSpinner({ label = "جارٍ التحميل" }: { label?: string }) { return <span className="dsSpinner" role="status"><i aria-hidden="true" /><span className="srOnly">{label}</span></span>; }

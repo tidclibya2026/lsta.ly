@@ -1,0 +1,4 @@
+"use client";
+import { useState } from "react";
+export interface TabItem { id: string; label: string; content?: React.ReactNode }
+export function Tabs({ items, defaultTab, ariaLabel = "التبويبات", onChange }: { items: TabItem[]; defaultTab?: string; ariaLabel?: string; onChange?: (id: string) => void }) { const [active, setActive] = useState(defaultTab ?? items[0]?.id); const select = (id: string) => { setActive(id); onChange?.(id); }; return <div className="dsTabs"><div role="tablist" aria-label={ariaLabel}>{items.map((item) => <button key={item.id} role="tab" aria-selected={active === item.id} tabIndex={active === item.id ? 0 : -1} className={active === item.id ? "selected" : ""} onClick={() => select(item.id)}>{item.label}</button>)}</div>{items.map((item) => active === item.id && item.content ? <div role="tabpanel" key={item.id}>{item.content}</div> : null)}</div>; }

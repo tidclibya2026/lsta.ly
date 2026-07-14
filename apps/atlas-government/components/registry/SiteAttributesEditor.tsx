@@ -1,0 +1,2 @@
+import { EmptyState } from "@/components/feedback/EmptyState"; import type { SiteAttribute } from "@/lib/api/registry-types";
+export function SiteAttributesEditor({ items }: { items: SiteAttribute[] }) { return items.length ? <div className="registryCards">{items.map((item) => <article className="dsCard" key={item.id}><h3>{item.label_ar}</h3><p>{item.value_text || "—"}</p><small>{item.attribute_group} · {item.verification_status}</small></article>)}</div> : <EmptyState title="لا توجد خصائص مسجلة" />; }

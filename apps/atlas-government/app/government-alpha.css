@@ -1,0 +1,16 @@
+.workspace>.dsAlert{margin-bottom:18px}
+.prompt>.dsField{min-width:0;flex:1}
+.prompt>.dsField>span{display:none}
+.drawerStatus{margin-bottom:12px}
+.mapDetails{display:grid;grid-template-columns:110px minmax(0,1fr);margin:0}
+.mapDetails dt,.mapDetails dd{padding:9px 0;border-bottom:1px solid #e8edf1;line-height:1.6}
+.mapDetails dt{color:var(--muted);font-size:12px}
+.mapDetails dd{margin:0;color:var(--text);font-size:12px;font-weight:600;overflow-wrap:anywhere}
+.dsDivider{height:1px;margin:16px 0;border:0;background:var(--color-border)}
+.dsDivider.labeled{height:auto;display:flex;align-items:center;gap:10px;background:none;color:var(--color-muted);font-size:11px}
+.dsDivider.labeled:before,.dsDivider.labeled:after{content:"";height:1px;flex:1;background:var(--color-border)}
+.dsDescriptionList{margin:0}.dsDescriptionList>div{display:grid;grid-template-columns:110px minmax(0,1fr);border-bottom:1px solid #e8edf1}.dsDescriptionList dt,.dsDescriptionList dd{padding:9px 0;line-height:1.6}.dsDescriptionList dt{color:var(--color-muted);font-size:12px}.dsDescriptionList dd{margin:0;color:var(--color-text);font-size:12px;font-weight:600;overflow-wrap:anywhere}
+.dsMetricBar{display:grid;grid-template-columns:110px 1fr 60px;align-items:center;gap:10px;font-size:12px}.dsMetricBar>div{height:9px;overflow:hidden;border-radius:10px;background:#edf1f5}.dsMetricBar i{display:block;height:100%;border-radius:10px;background:linear-gradient(90deg,var(--color-government-gold),#efd386)}
+.dsCheckbox{display:flex;align-items:flex-start;gap:8px;cursor:pointer}.dsCheckbox input{width:16px;height:16px;accent-color:var(--color-government-navy-surface)}.dsCheckbox span{display:grid}.dsCheckbox small{color:var(--color-muted)}
+.dsLayerItem{display:block}.dsLayerSection{display:block;padding:6px 22px 2px;color:var(--color-muted);font-size:10px;font-weight:700}.dsLayerItem label{margin-right:12px}.dsMapToolbar{position:absolute;top:116px;left:10px;z-index:3}.dsMapToolbar .dsIconButton{box-shadow:0 0 0 2px #0000001a;font-size:23px}
+.dsDrawerBackdrop.nonModal{background:transparent;pointer-events:none}.dsDrawerBackdrop.nonModal .dsDrawer{pointer-events:auto;border-right:1px solid var(--color-border)}

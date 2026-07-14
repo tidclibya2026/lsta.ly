@@ -1,0 +1,3 @@
+import type { ReactNode } from "react";
+export interface DataColumn<T> { key: string; header: string; render: (row: T) => ReactNode }
+export function DataTable<T>({ columns, rows, rowKey, caption = "جدول البيانات" }: { columns: DataColumn<T>[]; rows: T[]; rowKey: (row: T) => string; caption?: string }) { return <div className="dsTableWrap"><table className="dsTable"><caption className="srOnly">{caption}</caption><thead><tr>{columns.map((column) => <th scope="col" key={column.key}>{column.header}</th>)}</tr></thead><tbody>{rows.map((row) => <tr key={rowKey(row)}>{columns.map((column) => <td key={column.key}>{column.render(row)}</td>)}</tr>)}</tbody></table></div>; }

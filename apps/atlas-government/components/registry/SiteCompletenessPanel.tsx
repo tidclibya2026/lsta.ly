@@ -1,0 +1,2 @@
+import { MetricBar } from "@/components/data-display/MetricBar"; import type { Completeness } from "@/lib/api/registry-types";
+export function SiteCompletenessPanel({ value }: { value: Completeness }) { return <section className="dsCard"><strong className="qualityScore">{value.score}/100</strong>{Object.entries(value.breakdown).map(([key,item])=><MetricBar key={key} label={key} value={item.earned} max={item.weight} displayValue={`${item.earned}/${item.weight}`}/>)}</section>; }

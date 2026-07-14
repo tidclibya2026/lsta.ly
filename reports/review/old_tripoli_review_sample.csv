@@ -1,0 +1,15 @@
+﻿id,source_feature_id,name_ar,geometry_type,folder_name,review_status,promotion_eligible
+27f5da18-2def-4710-842b-c69a4083e305,LSTA-OLD-TRIPOLI-000001,"متحف السرايا الحمراء 
+ ‎‎",Point,المدينة_القديمة_الفضاءات_التاريخية,accepted,False
+52a56069-9d31-4131-b915-e8d19d1a08e8,LSTA-OLD-TRIPOLI-000002,قلعة السرايا الحمراء,Point,المدينة_القديمة_الفضاءات_التاريخية,pending_review,False
+48edb935-4077-414b-a666-085908422ec1,LSTA-OLD-TRIPOLI-000003,بحيرة السرايا الحمراء‎,Point,المدينة_القديمة_الفضاءات_التاريخية,pending_review,False
+f0e5ded0-858f-4a94-ae48-772b3169671a,LSTA-OLD-TRIPOLI-000004,قوس ماركوس اوريليوس,Point,المدينة_القديمة_الفضاءات_التاريخية,pending_review,False
+1ed6d3bd-a4b8-4ec1-a8ff-f62d927e76e4,LSTA-OLD-TRIPOLI-000005,"حصن القديس يعقوب (السرايا الحمراء)
+ ‎‎",Point,المدينة_القديمة_الفضاءات_التاريخية,pending_review,False
+784494f4-36c0-4581-b221-6856774fb23f,LSTA-OLD-TRIPOLI-000006,"برج ""القديس جورج"" 
+ ‎‎",Point,المدينة_القديمة_الفضاءات_التاريخية,pending_review,False
+aab9ba29-54f7-4326-b73d-ba9e9d22051b,LSTA-OLD-TRIPOLI-000007,برج الساعة ‎,Point,المدينة_القديمة_الفضاءات_التاريخية,pending_review,False
+df817986-57e8-4087-82c7-086b71d72763,LSTA-OLD-TRIPOLI-000008,المكتبة الطرابلسية‎,Point,المدينة_القديمة_الفضاءات_التاريخية,pending_review,False
+b68ac274-d7e7-40ba-846b-856b40a9dc9b,LSTA-OLD-TRIPOLI-000009,"الكنيسة الأرتذوكسية 
+ ‎",Point,المدينة_القديمة_الفضاءات_التاريخية,pending_review,False
+8ac923be-4ad7-499e-aebf-3d11eb92fdf3,LSTA-OLD-TRIPOLI-000010,كنيسة السيدة مريم ‎,Point,المدينة_القديمة_الفضاءات_التاريخية,pending_review,False

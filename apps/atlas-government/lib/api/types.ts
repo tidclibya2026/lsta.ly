@@ -1,0 +1,12 @@
+export type GeometryType = "Point" | "LineString" | "Polygon" | string;
+export type ReviewStage = "technical" | "gis" | "data" | "final";
+export type ReviewDecision = "pending" | "accepted" | "rejected" | "needs_correction";
+
+export interface ReviewSummary { total_features: number; pending_review: number; accepted: number; rejected: number; needs_correction: number; eligible_for_promotion: number; promoted: number; points: number; lines: number; polygons: number; named_features: number; unnamed_features: number }
+export interface ReviewFeature { id: string; source_feature_id: string; name_ar: string | null; geometry_type: GeometryType; review_status: string; folder_name: string | null; image_count: number; promotion_eligible: boolean; quality_score: number }
+export interface PaginatedFeatures { items: ReviewFeature[]; total: number; limit: number; offset: number }
+export interface QualityResult { quality_score: number; quality_breakdown: Record<string, { earned: number; weight: number; passed: boolean }>; critical_issues: string[]; warnings: string[] }
+export interface FeatureReview { id: string; review_stage: ReviewStage; decision: ReviewDecision; reviewer_role: string; notes: string | null; proposed_name_ar: string | null; reviewed_at: string | null }
+export interface ReviewFeatureDetails extends ReviewFeature { geometry: GeoJSON.Geometry | null; properties: Record<string, unknown>; images: string[]; description_html: string | null; description_text: string | null; extended_data: Record<string, unknown>; validation_issues: unknown[]; reviews: FeatureReview[]; eligibility: { eligible: boolean; checks: Record<string, boolean> }; quality: QualityResult; promotion_record: null | { id: string; site_id: string | null; status: string; promoted_at: string | null; failure_reason: string | null }; audit_timeline: Array<{ id: string; action: string; details: Record<string, unknown>; created_at: string }> }
+export interface FeatureFilters { geometry_type?: string; review_status?: string; review_stage?: string; has_name?: boolean; has_images?: boolean; promotion_eligible?: boolean; folder_name?: string; search?: string; limit?: number; offset?: number; sort_by?: string; sort_order?: "asc" | "desc" }
+export interface ReviewPayload { review_stage: ReviewStage; decision: ReviewDecision; notes?: string; reviewer_role: string; proposed_name_ar?: string; proposed_category_id?: string; proposed_municipality_id?: string }

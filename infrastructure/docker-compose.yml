@@ -1,0 +1,31 @@
+services:
+  lsta-postgres:
+    image: postgis/postgis:16-3.4
+    container_name: lsta-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - lsta_postgres_data:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    networks:
+      - lsta-network
+
+volumes:
+  lsta_postgres_data:
+    name: lsta_postgres_data
+
+networks:
+  lsta-network:
+    name: lsta-network
+    driver: bridge
