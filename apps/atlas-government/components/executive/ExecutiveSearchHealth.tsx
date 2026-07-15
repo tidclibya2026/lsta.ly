@@ -1,0 +1,1 @@
+export function ExecutiveSearchHealth({total=0,average=0}:{total?:number;average?:number}){return <section className="executivePanel"><h2>نشاط البحث</h2><p>الاستعلامات: {total}</p><p>متوسط الاستجابة: {average} ms</p></section>}

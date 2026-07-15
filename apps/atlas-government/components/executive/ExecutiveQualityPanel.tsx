@@ -1,0 +1,1 @@
+export function ExecutiveQualityPanel({quality,completeness,invalid}:{quality:number;completeness:number;invalid:number}){return <section className="executivePanel"><h2>جودة البيانات</h2><p>متوسط الجودة <b>{quality}%</b></p><p>متوسط الاكتمال <b>{completeness}%</b></p><p>هندسات غير صالحة <b>{invalid}</b></p></section>}

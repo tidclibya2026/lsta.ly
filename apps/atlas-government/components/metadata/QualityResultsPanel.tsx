@@ -1,0 +1,1 @@
+import { EmptyState } from "@/components/feedback/EmptyState";export function QualityResultsPanel({items}:{items:unknown[]}){return items.length?<pre>{JSON.stringify(items,null,2)}</pre>:<EmptyState title="لا توجد نتائج جودة للعرض"/>}

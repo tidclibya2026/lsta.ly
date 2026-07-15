@@ -1,0 +1,4 @@
+export interface MediaReviewSummaryData{total:number;pending:number;approved_internal:number;approved_public:number;rejected:number;ready_for_download:number}
+export interface MediaReviewItem{id:string;feature_id:string;site_name:string|null;original_url:string;normalized_url:string;domain:string;source_type:string;review_status:string;rights_status:string;rights_owner:string|null;rights_evidence:string|null;intended_use:string;reviewer_role:string|null;reviewer_notes:string|null;reviewed_at:string|null;download_status:string;local_media_url:string|null;sha256:string|null}
+export interface MediaReviewPage{items:MediaReviewItem[];total:number;limit:number;offset:number}
+export interface MediaReviewFilters{search?:string;feature_id?:string;domain?:string;source_type?:string;review_status?:string;rights_status?:string;download_status?:string;has_site_name?:boolean;limit?:number;offset?:number}

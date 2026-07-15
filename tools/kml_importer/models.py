@@ -24,6 +24,10 @@ class AtlasFeature(BaseModel):
     folder_name: str = ""
     extended_data: dict[str, str] = Field(default_factory=dict)
     image_urls: list[str] = Field(default_factory=list)
+    local_media_urls: list[str] = Field(default_factory=list)
+    rights_status: Literal["unknown", "pending_review", "approved_internal", "approved_public", "restricted"] = (
+        "unknown"
+    )
     source_file: str
     source_sha256: str
     verification_status: Literal["unverified", "under_review", "verified"] = "unverified"

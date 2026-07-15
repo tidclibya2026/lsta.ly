@@ -18,6 +18,7 @@ export interface ReviewDisplayProperties {
   source: string;
   verification_status: string;
   image_urls: string;
+  local_media_urls: string;
   proposed_name: string;
   review_status: string;
   review_kind: string;
@@ -49,6 +50,7 @@ export function convertReviewFeature(raw: RawGeoJSONFeature, index = 0): Convers
   const name = stringValue(properties.name_ar) || stringValue(properties.name_en);
   const qualityIssues = stringArray(properties.quality_issues);
   const imageUrls = stringArray(properties.image_urls).filter(isSafeImageUrl);
+  const localMediaUrls = stringArray(properties.local_media_url ?? properties.local_media_urls);
   const verification = stringValue(properties.verification_status) || "unverified";
   const needsReview = !name || qualityIssues.length > 0 || verification !== "verified";
   if (!name) issues.push("missing_name");
@@ -66,6 +68,7 @@ export function convertReviewFeature(raw: RawGeoJSONFeature, index = 0): Convers
         source: stringValue(properties.source_file) || "ملف KML للمدينة القديمة طرابلس",
         verification_status: verification,
         image_urls: JSON.stringify(imageUrls),
+        local_media_urls: JSON.stringify(localMediaUrls),
         proposed_name: stringValue(properties.proposed_name),
         review_status: needsReview ? "يحتاج مراجعة" : "مراجع",
         review_kind: geometryType === "Point" ? "موقع سياحي مستقل" : geometryType === "LineString" ? "مسار أو عنصر خطي" : "منطقة أو حد",

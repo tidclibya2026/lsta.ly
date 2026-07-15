@@ -1,0 +1,1 @@
+export const dynamicParams=false;export function generateStaticParams(){return ["LSTA-DS-OLD-TRIPOLI-KML","LSTA-DS-OLD-TRIPOLI-STAGING","LSTA-REGISTRY-SITES","LSTA-API-REVIEW","LSTA-API-REGISTRY","LSTA-API-SEARCH","LSTA-LAYER-OLD-TRIPOLI-REVIEW"].map(catalogCode=>({catalogCode}))}export default function Layout({children}:{children:React.ReactNode}){return children}

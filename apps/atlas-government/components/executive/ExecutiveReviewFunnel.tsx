@@ -1,0 +1,1 @@
+export function ExecutiveReviewFunnel({data}:{data:Record<string,number>}){return <section className="executivePanel"><h2>مسار البيانات والمراجعة</h2><div className="reviewFunnel">{Object.entries(data).filter(([k,v])=>k!=="published"||v>0).map(([k,v])=><div key={k}><span>{k}</span><strong>{v}</strong></div>)}</div></section>}

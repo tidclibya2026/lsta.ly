@@ -1,0 +1,1 @@
+import { MetricBar } from "@/components/data-display/MetricBar";export function MetadataCompletenessPanel({value}:{value:number}){return <MetricBar label="اكتمال البيانات الوصفية" value={value} max={100} displayValue={`${value}%`}/>}

@@ -1,0 +1,1 @@
+export function DiscoveryFacets({facets}:{facets:Record<string,unknown>|null}){return <section className="discoveryPanel"><h2>توزيع النتائج</h2>{!facets?<p>تظهر بعد البحث.</p>:Object.entries(facets).slice(0,5).map(([key,value])=><div key={key}><strong>{key}</strong><small>{JSON.stringify(value)}</small></div>)}</section>}

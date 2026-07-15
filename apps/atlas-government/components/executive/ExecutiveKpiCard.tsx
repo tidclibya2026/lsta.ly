@@ -1,0 +1,1 @@
+import type{ExecutiveKpi}from"@/lib/api/executive-types";export function ExecutiveKpiCard({item}:{item:ExecutiveKpi}){return <article className={`dsCard executiveKpi ${item.evaluation_status}`}><span>{item.name_ar}</span><strong>{item.value.toLocaleString("ar-LY")}</strong><small>{item.code}</small></article>}

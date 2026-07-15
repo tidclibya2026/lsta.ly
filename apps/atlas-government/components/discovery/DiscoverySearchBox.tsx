@@ -1,0 +1,2 @@
+"use client"; import { FormEvent } from "react";
+export function DiscoverySearchBox({value,onChange,onSubmit}:{value:string;onChange:(value:string)=>void;onSubmit:()=>void}){return <form className="discoverySearch" role="search" onSubmit={(e:FormEvent)=>{e.preventDefault();onSubmit()}}><label htmlFor="discovery-q">البحث في السجل الوطني وبيانات المراجعة</label><div><input id="discovery-q" value={value} onChange={e=>onChange(e.target.value)} placeholder="اسم الموقع، البلدية، الفئة أو المعرف الوطني" autoComplete="off"/><button type="submit">بحث</button></div></form>}

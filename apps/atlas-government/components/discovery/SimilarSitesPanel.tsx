@@ -1,0 +1,1 @@
+export function SimilarSitesPanel({items}:{items:Array<{national_id:string;name_ar:string;similarity_score:number}>}){return <section className="discoveryPanel"><h2>مواقع مشابهة</h2>{items.map(item=><p key={item.national_id}>{item.name_ar} <b>{item.similarity_score}%</b></p>)}</section>}

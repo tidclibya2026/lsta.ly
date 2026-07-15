@@ -56,3 +56,26 @@ def generate_alternative_forms(text: str) -> list[str]:
     if "ه" in normalized:
         forms.append(normalized.replace("ه", "ة"))
     return list(dict.fromkeys(value for value in forms if value))
+
+
+def detect_query_language(text: str) -> str:
+    has_arabic = bool(re.search(r"[\u0600-\u06ff]", text))
+    has_latin = bool(re.search(r"[A-Za-z]", text))
+    return "mixed" if has_arabic and has_latin else "arabic" if has_arabic else "english" if has_latin else "unknown"
+
+
+def tokenize_mixed_query(text: str) -> list[str]:
+    return re.findall(r"[\u0600-\u06ff]+|[a-z0-9-]+", normalize_arabic_text(text), flags=re.IGNORECASE)
+
+
+def generate_search_variants(text: str) -> list[str]:
+    normalized = normalize_arabic_text(text)
+    return list(dict.fromkeys([*generate_alternative_forms(text), normalized.replace("ؤ", "و"), normalized.replace("ئ", "ي")]))
+
+
+def normalize_place_name(text: str) -> str:
+    return normalize_arabic_text(text)
+
+
+def normalize_category_name(text: str) -> str:
+    return normalize_arabic_text(text)

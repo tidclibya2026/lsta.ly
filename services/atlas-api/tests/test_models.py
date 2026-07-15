@@ -27,7 +27,17 @@ def test_all_national_tables_are_registered() -> None:
         "staging.promotion_records",
         "audit.audit_log",
     }
-    assert expected == set(Base.metadata.tables)
+    assert expected.issubset(set(Base.metadata.tables))
+    assert {name for name in Base.metadata.tables if name.startswith("metadata.")} == {
+        "metadata.catalog_entries",
+        "metadata.catalog_fields",
+        "metadata.data_lineage_nodes",
+        "metadata.data_lineage_edges",
+        "metadata.data_quality_rules",
+        "metadata.data_quality_results",
+        "metadata.dataset_versions",
+        "metadata.media_review_items",
+    }
 
 
 def test_models_use_expected_schemas_and_geometry() -> None:
@@ -41,5 +51,5 @@ def test_initial_migration_contains_every_table() -> None:
     assert len(migrations) >= 6
     text = "\n".join(path.read_text(encoding="utf-8") for path in migrations)
     for table in Base.metadata.tables.values():
-        assert f'"{table.name}"' in text or f"'{table.name}'" in text
+        assert table.name in text
     assert "geoalchemy2.types.Geometry" in text

@@ -62,7 +62,7 @@ def calculate_relevance_score(
         matched.append("metadata")
     score += 5 if approved else 0
     score += 3 if internal else 0
-    score -= 0.01 if staging else 0
+    score -= 5 if staging else 0
     return round(min(100, score), 2), list(dict.fromkeys(matched))
 
 
@@ -203,6 +203,7 @@ def search_registry_sites(
                 "publication_status": publication,
                 "primary_image": image,
                 "has_images": image is not None,
+                "has_documents": False,
                 "image_count": 1 if image else 0,
                 "distance_meters": round(meters, 1) if meters is not None else None,
                 "relevance_score": score,
@@ -309,6 +310,7 @@ def search_staging_features(
                 "publication_status": "internal_review",
                 "primary_image": images[0] if images else None,
                 "has_images": bool(images),
+                "has_documents": bool(props.get("documents")),
                 "image_count": len(images),
                 "distance_meters": round(meters, 1) if meters is not None else None,
                 "relevance_score": score,
@@ -343,6 +345,11 @@ def unified_search(
         pool.extend(search_registry_sites(session, query_text, limit=fetch, offset=0, **filters))
     if source in {"staging", "all"}:
         pool.extend(search_staging_features(session, query_text, limit=fetch, offset=0, **filters))
+    minimum_quality = filters.get("minimum_quality_score")
+    if minimum_quality is not None:
+        pool = [item for item in pool if float(item.get("quality_score") or 0) >= float(minimum_quality)]
+    if filters.get("has_documents") is not None:
+        pool = [item for item in pool if bool(item.get("has_documents")) is bool(filters["has_documents"])]
     pool.sort(key=lambda item: (item["relevance_score"], item["source"] == "registry"), reverse=True)
     page = pool[offset : offset + limit]
     total_count = len(pool)

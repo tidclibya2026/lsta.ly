@@ -1,0 +1,1 @@
+export function ExecutiveSnapshotComparison({changes}:{changes:Record<string,{from:number;to:number}>}){return <section className="executivePanel"><h2>مقارنة اللقطات</h2>{Object.entries(changes).map(([k,v])=><p key={k}>{k}: {v.from} ← {v.to}</p>)}</section>}

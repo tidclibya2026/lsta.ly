@@ -9,6 +9,7 @@ import "./government-alpha.css";
 import "./review/review.css";
 import "./sites/sites.css";
 import "./search/search.css";
+import "./metadata/metadata.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tidclibya2026.github.io/lsta.ly/"),

@@ -1,0 +1,1 @@
+export function ExecutiveCoverageMap(){return <section className="executivePanel"><h2>التغطية المكانية</h2><div className="coveragePlaceholder">خريطة تجميعية للتغطية</div><p>فجوة البيانات لا تعني غياب المقومات السياحية؛ بل تعكس نقص الحصر أو المراجعة.</p></section>}

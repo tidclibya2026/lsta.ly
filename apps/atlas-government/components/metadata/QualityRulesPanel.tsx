@@ -1,0 +1,1 @@
+import { EmptyState } from "@/components/feedback/EmptyState";export function QualityRulesPanel({items}:{items:unknown[]}){return items.length?<pre>{JSON.stringify(items,null,2)}</pre>:<EmptyState title="قواعد الجودة متاحة في البيئة الداخلية"/>}

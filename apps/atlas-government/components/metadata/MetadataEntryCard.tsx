@@ -1,0 +1,2 @@
+import Link from "next/link";import { Badge } from "@/components/ui/Badge";import { Card } from "@/components/ui/Card";import type { MetadataEntry } from "@/lib/api/metadata-types";
+export function MetadataEntryCard({entry}:{entry:MetadataEntry}){return <Card><Badge tone="neutral">{entry.entry_type}</Badge><h3>{entry.title_ar}</h3><code>{entry.catalog_code}</code><p>اكتمال البيانات الوصفية: {entry.completeness}%</p><Link className="reviewOpen" href={`/metadata/${entry.catalog_code}`}>فتح الأصل الوصفي</Link></Card>}

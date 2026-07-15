@@ -1,0 +1,1 @@
+export function DiscoveryAutocomplete({items,onSelect}:{items:Array<{label?:string|null}>;onSelect:(value:string)=>void}){return items.length?<ul className="discoveryAutocomplete" role="listbox">{items.map((item,index)=><li key={`${item.label}-${index}`}><button role="option" onClick={()=>onSelect(item.label||"")}>{item.label}</button></li>)}</ul>:null}

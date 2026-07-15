@@ -1,0 +1,1 @@
+import { Dialog } from "@/components/ui/Dialog";export function BulkReviewDialog({open,onClose,children}:{open:boolean;onClose:()=>void;children:React.ReactNode}){return <Dialog open={open} onClose={onClose} title="مراجعة جماعية">{children}</Dialog>}

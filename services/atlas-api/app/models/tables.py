@@ -21,7 +21,7 @@ from sqlalchemy import (
     func,
     text,
 )
-from sqlalchemy.dialects.postgresql import JSONB, TSVECTOR
+from sqlalchemy.dialects.postgresql import ARRAY, JSONB, TSVECTOR
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
@@ -49,6 +49,8 @@ REVIEW_STATUSES = ("pending_review", "accepted", "rejected", "needs_correction")
 REVIEW_STAGES = ("technical", "gis", "data", "final")
 REVIEW_DECISIONS = ("pending", "accepted", "rejected", "needs_correction")
 PROMOTION_STATUSES = ("pending", "promoted", "failed", "cancelled")
+DUPLICATE_STATUSES = ("pending_review", "confirmed_duplicate", "not_duplicate", "merged", "ignored")
+SEARCH_INDEX_STATUSES = ("pending", "indexed", "failed", "stale")
 
 
 def status_check(column: str, values: tuple[str, ...], name: str) -> CheckConstraint:
@@ -461,4 +463,358 @@ class AuditLog(UUIDPrimaryKey, Base):
     entity_type: Mapped[str] = mapped_column(String(120), nullable=False)
     entity_id: Mapped[uuid.UUID | None] = mapped_column(Uuid(as_uuid=True))
     details: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class CatalogEntry(UUIDPrimaryKey, Base):
+    __tablename__ = "catalog_entries"
+    __table_args__ = ({"schema": "metadata"},)
+    catalog_code: Mapped[str] = mapped_column(String(160), unique=True, index=True)
+    entry_type: Mapped[str] = mapped_column(String(40), index=True)
+    title_ar: Mapped[str] = mapped_column(String(500))
+    title_en: Mapped[str | None] = mapped_column(String(500))
+    description_ar: Mapped[str | None] = mapped_column(Text)
+    description_en: Mapped[str | None] = mapped_column(Text)
+    owning_organization: Mapped[str] = mapped_column(String(500))
+    steward_name: Mapped[str | None] = mapped_column(String(300))
+    technical_owner: Mapped[str | None] = mapped_column(String(300))
+    source_system: Mapped[str | None] = mapped_column(String(300))
+    source_reference: Mapped[str | None] = mapped_column(Text)
+    classification_level: Mapped[str] = mapped_column(String(30), default="internal")
+    sensitivity_level: Mapped[str] = mapped_column(String(20), default="low")
+    lifecycle_status: Mapped[str] = mapped_column(String(30), default="draft", index=True)
+    verification_status: Mapped[str] = mapped_column(String(40), default="draft", index=True)
+    publication_status: Mapped[str] = mapped_column(String(40), default="internal", index=True)
+    metadata_standard: Mapped[str] = mapped_column(String(100), default="LSTA")
+    metadata_json: Mapped[dict[str, Any]] = mapped_column(JSONB, default=dict)
+    keywords: Mapped[list[str]] = mapped_column(ARRAY(Text), default=list)
+    tags: Mapped[list[str]] = mapped_column(ARRAY(Text), default=list)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    archived_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+class CatalogField(UUIDPrimaryKey, Base):
+    __tablename__ = "catalog_fields"
+    __table_args__ = (UniqueConstraint("catalog_entry_id", "field_name"), {"schema": "metadata"})
+    catalog_entry_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("metadata.catalog_entries.id", ondelete="CASCADE"), index=True
+    )
+    field_name: Mapped[str] = mapped_column(String(200))
+    label_ar: Mapped[str] = mapped_column(String(300))
+    label_en: Mapped[str | None] = mapped_column(String(300))
+    data_type: Mapped[str] = mapped_column(String(100))
+    description_ar: Mapped[str | None] = mapped_column(Text)
+    description_en: Mapped[str | None] = mapped_column(Text)
+    nullable: Mapped[bool] = mapped_column(Boolean, default=True)
+    required: Mapped[bool] = mapped_column(Boolean, default=False)
+    is_identifier: Mapped[bool] = mapped_column(Boolean, default=False)
+    is_spatial: Mapped[bool] = mapped_column(Boolean, default=False)
+    is_sensitive: Mapped[bool] = mapped_column(Boolean, default=False)
+    validation_rules: Mapped[dict[str, Any]] = mapped_column(JSONB, default=dict)
+    allowed_values: Mapped[Any | None] = mapped_column(JSONB)
+    unit: Mapped[str | None] = mapped_column(String(100))
+    source_field: Mapped[str | None] = mapped_column(String(200))
+    display_order: Mapped[int] = mapped_column(Integer, default=0)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class DataLineageNode(UUIDPrimaryKey, Base):
+    __tablename__ = "data_lineage_nodes"
+    __table_args__ = (UniqueConstraint("node_type", "node_reference"), {"schema": "metadata"})
+    node_type: Mapped[str] = mapped_column(String(40), index=True)
+    node_reference: Mapped[str] = mapped_column(Text)
+    title: Mapped[str] = mapped_column(String(500))
+    system_name: Mapped[str] = mapped_column(String(200))
+    metadata_json: Mapped[dict[str, Any]] = mapped_column(JSONB, default=dict)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class DataLineageEdge(UUIDPrimaryKey, Base):
+    __tablename__ = "data_lineage_edges"
+    __table_args__ = (
+        UniqueConstraint("source_node_id", "target_node_id", "transformation_type"),
+        {"schema": "metadata"},
+    )
+    source_node_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("metadata.data_lineage_nodes.id"), index=True)
+    target_node_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("metadata.data_lineage_nodes.id"), index=True)
+    transformation_type: Mapped[str] = mapped_column(String(40), index=True)
+    transformation_reference: Mapped[str | None] = mapped_column(Text)
+    process_name: Mapped[str] = mapped_column(String(300))
+    process_version: Mapped[str | None] = mapped_column(String(80))
+    executed_by: Mapped[str | None] = mapped_column(String(200))
+    executed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    status: Mapped[str] = mapped_column(String(20), default="success")
+    metadata_json: Mapped[dict[str, Any]] = mapped_column(JSONB, default=dict)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class DataQualityRule(UUIDPrimaryKey, Base):
+    __tablename__ = "data_quality_rules"
+    __table_args__ = ({"schema": "metadata"},)
+    rule_code: Mapped[str] = mapped_column(String(160), unique=True)
+    name_ar: Mapped[str] = mapped_column(String(500))
+    name_en: Mapped[str | None] = mapped_column(String(500))
+    description: Mapped[str] = mapped_column(Text)
+    target_entity: Mapped[str] = mapped_column(String(160), index=True)
+    target_field: Mapped[str | None] = mapped_column(String(160))
+    rule_type: Mapped[str] = mapped_column(String(40))
+    severity: Mapped[str] = mapped_column(String(20), index=True)
+    rule_expression: Mapped[dict[str, Any]] = mapped_column(JSONB)
+    is_active: Mapped[bool] = mapped_column(Boolean, default=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class DataQualityResult(UUIDPrimaryKey, Base):
+    __tablename__ = "data_quality_results"
+    __table_args__ = ({"schema": "metadata"},)
+    rule_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("metadata.data_quality_rules.id"))
+    entity_type: Mapped[str] = mapped_column(String(160))
+    entity_id: Mapped[str] = mapped_column(Text)
+    status: Mapped[str] = mapped_column(String(20))
+    score: Mapped[float | None] = mapped_column(Numeric(5, 2))
+    issue_details: Mapped[dict[str, Any]] = mapped_column(JSONB, default=dict)
+    evaluated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    evaluated_by: Mapped[str] = mapped_column(String(200))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class DatasetVersion(UUIDPrimaryKey, Base):
+    __tablename__ = "dataset_versions"
+    __table_args__ = (UniqueConstraint("catalog_entry_id", "version_number"), {"schema": "metadata"})
+    catalog_entry_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("metadata.catalog_entries.id"), index=True)
+    version_number: Mapped[int] = mapped_column(Integer)
+    version_label: Mapped[str] = mapped_column(String(160))
+    checksum: Mapped[str | None] = mapped_column(String(64))
+    schema_snapshot: Mapped[dict[str, Any]] = mapped_column(JSONB, default=dict)
+    row_count: Mapped[int | None] = mapped_column(BigInteger)
+    spatial_feature_count: Mapped[int | None] = mapped_column(BigInteger)
+    created_by: Mapped[str | None] = mapped_column(String(200))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    release_notes: Mapped[str | None] = mapped_column(Text)
+
+
+class MediaReviewItem(UUIDPrimaryKey, Base):
+    __tablename__ = "media_review_items"
+    __table_args__ = (
+        UniqueConstraint("feature_id", "original_url", name="uq_media_review_feature_url"),
+        Index("ix_media_review_status", "review_status"),
+        Index("ix_media_review_rights", "rights_status"),
+        Index("ix_media_review_download", "download_status"),
+        Index("ix_media_review_domain", "domain"),
+        {"schema": "metadata"},
+    )
+    feature_id: Mapped[str] = mapped_column(String(255), nullable=False)
+    site_id: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("atlas.sites.id"))
+    site_name: Mapped[str | None] = mapped_column(String(500))
+    original_url: Mapped[str] = mapped_column(Text, nullable=False)
+    normalized_url: Mapped[str] = mapped_column(Text, nullable=False)
+    domain: Mapped[str] = mapped_column(String(300), nullable=False, default="")
+    source_type: Mapped[str] = mapped_column(String(60), nullable=False)
+    review_status: Mapped[str] = mapped_column(String(30), nullable=False, default="pending_review")
+    rights_status: Mapped[str] = mapped_column(String(30), nullable=False, default="unknown")
+    rights_owner: Mapped[str | None] = mapped_column(String(500))
+    rights_evidence: Mapped[str | None] = mapped_column(Text)
+    intended_use: Mapped[str] = mapped_column(String(40), nullable=False, default="internal_review")
+    reviewer_role: Mapped[str | None] = mapped_column(String(100))
+    reviewer_notes: Mapped[str | None] = mapped_column(Text)
+    reviewed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    download_status: Mapped[str] = mapped_column(String(30), nullable=False, default="not_requested")
+    local_media_url: Mapped[str | None] = mapped_column(Text)
+    sha256: Mapped[str | None] = mapped_column(String(64))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class SavedQuery(UUIDPrimaryKey, Base):
+    __tablename__ = "saved_queries"
+    __table_args__ = (Index("ix_saved_queries_normalized_query", "normalized_query"), Index("ix_saved_queries_filters_gin", "filters", postgresql_using="gin"), Index("ix_saved_queries_spatial_filter_gin", "spatial_filter", postgresql_using="gin"), {"schema": "search"})
+    user_id: Mapped[uuid.UUID | None] = mapped_column(Uuid(as_uuid=True))
+    query_name: Mapped[str] = mapped_column(String(300), nullable=False)
+    query_text: Mapped[str] = mapped_column(Text, nullable=False, default="")
+    normalized_query: Mapped[str] = mapped_column(Text, nullable=False, default="")
+    filters: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    spatial_filter: Mapped[dict[str, Any] | None] = mapped_column(JSONB)
+    sort_by: Mapped[str | None] = mapped_column(String(60))
+    sort_order: Mapped[str | None] = mapped_column(String(10))
+    is_shared: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
+    is_active: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class SearchLog(UUIDPrimaryKey, Base):
+    __tablename__ = "search_logs"
+    __table_args__ = (Index("ix_search_logs_created_at", "created_at"), Index("ix_search_logs_no_results", "no_results"), Index("ix_search_logs_role", "role"), {"schema": "search"})
+    user_id: Mapped[uuid.UUID | None] = mapped_column(Uuid(as_uuid=True))
+    role: Mapped[str | None] = mapped_column(String(80))
+    query_text: Mapped[str] = mapped_column(Text, nullable=False, default="")
+    normalized_query: Mapped[str] = mapped_column(Text, nullable=False, default="")
+    source_scope: Mapped[str] = mapped_column(String(40), nullable=False)
+    filters: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    result_count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    query_time_ms: Mapped[float] = mapped_column(Numeric(12, 3), nullable=False, default=0)
+    selected_result_type: Mapped[str | None] = mapped_column(String(80))
+    selected_result_id: Mapped[str | None] = mapped_column(Text)
+    no_results: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class QueryStatistic(UUIDPrimaryKey, Base):
+    __tablename__ = "query_statistics"
+    __table_args__ = ({"schema": "search"},)
+    normalized_query: Mapped[str] = mapped_column(Text, unique=True, nullable=False)
+    total_searches: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    successful_searches: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    no_result_searches: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    average_result_count: Mapped[float] = mapped_column(Numeric(12, 2), nullable=False, default=0)
+    average_query_time_ms: Mapped[float] = mapped_column(Numeric(12, 3), nullable=False, default=0)
+    last_searched_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class SearchSuggestion(UUIDPrimaryKey, Base):
+    __tablename__ = "search_suggestions"
+    __table_args__ = (UniqueConstraint("normalized_text", "suggestion_type", "source_reference"), Index("ix_search_suggestions_popularity", "popularity_score"), Index("ix_search_suggestions_relevance", "relevance_score"), {"schema": "search"})
+    suggestion_text: Mapped[str] = mapped_column(Text, nullable=False)
+    normalized_text: Mapped[str] = mapped_column(Text, nullable=False)
+    suggestion_type: Mapped[str] = mapped_column(String(40), nullable=False)
+    source_reference: Mapped[str | None] = mapped_column(Text)
+    popularity_score: Mapped[float] = mapped_column(Numeric(8, 2), nullable=False, default=0)
+    relevance_score: Mapped[float] = mapped_column(Numeric(8, 2), nullable=False, default=0)
+    is_active: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class DuplicateCandidate(UUIDPrimaryKey, Base):
+    __tablename__ = "duplicate_candidates"
+    __table_args__ = (UniqueConstraint("source_entity_type", "source_entity_id", "target_entity_type", "target_entity_id"), status_check("status", DUPLICATE_STATUSES, "duplicate_candidate_status"), Index("ix_duplicate_confidence", "confidence_score"), Index("ix_duplicate_status", "status"), {"schema": "search"})
+    source_entity_type: Mapped[str] = mapped_column(String(40), nullable=False)
+    source_entity_id: Mapped[str] = mapped_column(Text, nullable=False)
+    target_entity_type: Mapped[str] = mapped_column(String(40), nullable=False)
+    target_entity_id: Mapped[str] = mapped_column(Text, nullable=False)
+    name_similarity: Mapped[float] = mapped_column(Numeric(5, 2), nullable=False)
+    spatial_distance_meters: Mapped[float | None] = mapped_column(Numeric)
+    description_similarity: Mapped[float | None] = mapped_column(Numeric(5, 2))
+    category_match: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
+    municipality_match: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
+    confidence_score: Mapped[float] = mapped_column(Numeric(5, 2), nullable=False)
+    status: Mapped[str] = mapped_column(String(30), nullable=False, default="pending_review")
+    reviewer_id: Mapped[uuid.UUID | None] = mapped_column(Uuid(as_uuid=True))
+    reviewer_notes: Mapped[str | None] = mapped_column(Text)
+    reviewed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class SimilarSiteCache(UUIDPrimaryKey, Base):
+    __tablename__ = "similar_site_cache"
+    __table_args__ = (UniqueConstraint("source_site_id", "target_site_id", "calculation_version"), Index("ix_similar_source", "source_site_id"), Index("ix_similar_target", "target_site_id"), {"schema": "search"})
+    source_site_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("atlas.sites.id", ondelete="CASCADE"), nullable=False)
+    target_site_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("atlas.sites.id", ondelete="CASCADE"), nullable=False)
+    similarity_score: Mapped[float] = mapped_column(Numeric(5, 2), nullable=False)
+    similarity_breakdown: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    calculated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    calculation_version: Mapped[str] = mapped_column(String(40), nullable=False)
+
+
+class SearchIndexStatus(UUIDPrimaryKey, Base):
+    __tablename__ = "search_index_status"
+    __table_args__ = (UniqueConstraint("entity_type", "entity_id", "index_version"), status_check("status", SEARCH_INDEX_STATUSES, "search_index_status_value"), {"schema": "search"})
+    entity_type: Mapped[str] = mapped_column(String(40), nullable=False)
+    entity_id: Mapped[str] = mapped_column(Text, nullable=False)
+    indexed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    index_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    status: Mapped[str] = mapped_column(String(20), nullable=False, default="pending")
+    error_message: Mapped[str | None] = mapped_column(Text)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class DashboardSnapshot(UUIDPrimaryKey, Base):
+    __tablename__ = "dashboard_snapshots"
+    __table_args__ = (UniqueConstraint("snapshot_date", "snapshot_type"), Index("ix_dashboard_snapshot_date", "snapshot_date"), Index("ix_dashboard_metrics_gin", "metrics", postgresql_using="gin"), {"schema": "executive"})
+    snapshot_date: Mapped[date] = mapped_column(nullable=False)
+    snapshot_type: Mapped[str] = mapped_column(String(20), nullable=False)
+    metrics: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    generated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    generated_by: Mapped[str | None] = mapped_column(String(120))
+    source_version: Mapped[str | None] = mapped_column(String(100))
+
+
+class ExecutiveAlert(UUIDPrimaryKey, Base):
+    __tablename__ = "alerts"
+    __table_args__ = (Index("ix_executive_alert_status", "status"), Index("ix_executive_alert_severity", "severity"), Index("ix_executive_alert_type", "alert_type"), {"schema": "executive"})
+    alert_code: Mapped[str] = mapped_column(String(120), nullable=False)
+    alert_type: Mapped[str] = mapped_column(String(80), nullable=False)
+    severity: Mapped[str] = mapped_column(String(20), nullable=False)
+    title_ar: Mapped[str] = mapped_column(String(500), nullable=False)
+    title_en: Mapped[str | None] = mapped_column(String(500))
+    description_ar: Mapped[str] = mapped_column(Text, nullable=False)
+    description_en: Mapped[str | None] = mapped_column(Text)
+    source_entity_type: Mapped[str | None] = mapped_column(String(80))
+    source_entity_id: Mapped[str | None] = mapped_column(Text)
+    metric_name: Mapped[str | None] = mapped_column(String(120))
+    metric_value: Mapped[float | None] = mapped_column(Numeric)
+    threshold_value: Mapped[float | None] = mapped_column(Numeric)
+    status: Mapped[str] = mapped_column(String(30), nullable=False, default="open")
+    assigned_role: Mapped[str | None] = mapped_column(String(80))
+    acknowledged_by: Mapped[str | None] = mapped_column(String(120))
+    acknowledged_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    resolved_by: Mapped[str | None] = mapped_column(String(120))
+    resolved_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    resolution_notes: Mapped[str | None] = mapped_column(Text)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class KpiDefinition(UUIDPrimaryKey, Base):
+    __tablename__ = "kpi_definitions"
+    __table_args__ = (Index("ix_kpi_code", "kpi_code"), {"schema": "executive"})
+    kpi_code: Mapped[str] = mapped_column(String(120), unique=True, nullable=False)
+    name_ar: Mapped[str] = mapped_column(String(500), nullable=False)
+    name_en: Mapped[str | None] = mapped_column(String(500))
+    description_ar: Mapped[str] = mapped_column(Text, nullable=False)
+    category: Mapped[str] = mapped_column(String(80), nullable=False)
+    calculation_method: Mapped[str] = mapped_column(Text, nullable=False)
+    unit: Mapped[str] = mapped_column(String(40), nullable=False)
+    target_value: Mapped[float | None] = mapped_column(Numeric)
+    warning_threshold: Mapped[float | None] = mapped_column(Numeric)
+    critical_threshold: Mapped[float | None] = mapped_column(Numeric)
+    direction: Mapped[str] = mapped_column(String(30), nullable=False)
+    is_active: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
+    display_order: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class KpiValue(UUIDPrimaryKey, Base):
+    __tablename__ = "kpi_values"
+    __table_args__ = (Index("ix_kpi_measured_at", "measured_at"), Index("ix_kpi_evaluation", "evaluation_status"), Index("ix_kpi_dimensions_gin", "dimensions", postgresql_using="gin"), {"schema": "executive"})
+    kpi_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("executive.kpi_definitions.id", ondelete="CASCADE"), nullable=False)
+    value: Mapped[float] = mapped_column(Numeric, nullable=False)
+    previous_value: Mapped[float | None] = mapped_column(Numeric)
+    change_value: Mapped[float | None] = mapped_column(Numeric)
+    change_percentage: Mapped[float | None] = mapped_column(Numeric)
+    evaluation_status: Mapped[str] = mapped_column(String(20), nullable=False)
+    measured_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    dimensions: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    source_reference: Mapped[str | None] = mapped_column(Text)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class ExecutiveServiceHealth(UUIDPrimaryKey, Base):
+    __tablename__ = "service_health"
+    __table_args__ = (Index("ix_service_health_code", "service_code"), Index("ix_service_health_checked", "checked_at"), {"schema": "executive"})
+    service_code: Mapped[str] = mapped_column(String(100), nullable=False)
+    service_name: Mapped[str] = mapped_column(String(300), nullable=False)
+    status: Mapped[str] = mapped_column(String(20), nullable=False)
+    response_time_ms: Mapped[float | None] = mapped_column(Numeric(12, 3))
+    details: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    checked_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)

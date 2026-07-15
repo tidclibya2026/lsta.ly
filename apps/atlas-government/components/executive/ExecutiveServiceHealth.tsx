@@ -1,0 +1,1 @@
+import type{ServiceHealth}from"@/lib/api/executive-types";export function ExecutiveServiceHealth({items}:{items:ServiceHealth[]}){return <section className="executivePanel"><h2>حالة الخدمات</h2>{items.map(x=><div className="serviceRow" key={x.service_code}><span>{x.service_name}</span><b className={x.status}>{x.status}</b><small>{x.response_time_ms} ms</small></div>)}</section>}

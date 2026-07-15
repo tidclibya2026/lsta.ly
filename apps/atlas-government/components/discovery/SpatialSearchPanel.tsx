@@ -1,0 +1,1 @@
+export function SpatialSearchPanel({onApply}:{onApply:(lat:number,lon:number,radius:number)=>void}){return <section className="discoveryPanel"><h2>بحث مكاني</h2><button onClick={()=>onApply(32.8959,13.1808,500)}>ضمن 500 متر من المدينة القديمة</button></section>}

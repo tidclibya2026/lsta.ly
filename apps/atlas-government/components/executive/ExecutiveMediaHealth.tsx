@@ -1,0 +1,1 @@
+export function ExecutiveMediaHealth({pending,approved=0}:{pending:number;approved?:number}){return <section className="executivePanel"><h2>صحة الوسائط</h2><p>قيد المراجعة: {pending}</p><p>معتمدة للنشر العام: {approved}</p></section>}

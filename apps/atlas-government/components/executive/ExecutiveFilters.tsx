@@ -1,0 +1,1 @@
+export function ExecutiveFilters({period,onChange}:{period:number;onChange:(n:number)=>void}){return <label className="executiveFilters">الفترة<select value={period} onChange={e=>onChange(Number(e.target.value))}><option value="30">30 يومًا</option><option value="90">90 يومًا</option><option value="365">سنة</option></select></label>}

@@ -6,7 +6,8 @@ from typing import Any
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models import MediaAsset, SiteAttribute, SiteDocument, SiteProfile
+from app.models import MediaAsset, Site, SiteAttribute, SiteDocument, SiteProfile
+from app.services.data_lineage_service import create_lineage_edge, get_or_create_node
 
 
 def get_profile(session: Session, site_id: uuid.UUID, *, create: bool = True) -> SiteProfile | None:
@@ -97,6 +98,15 @@ def create_document_metadata(session: Session, site_id: uuid.UUID, values: dict[
     document = SiteDocument(site_id=site_id, **values)
     session.add(document)
     session.flush()
+    site = session.get(Site, site_id)
+    if site:
+        create_lineage_edge(
+            session,
+            get_or_create_node(session, "national_site", site.national_id, site.name_ar),
+            get_or_create_node(session, "document", str(document.id), document.title_ar),
+            "linked_to",
+            "Site profile service",
+        )
     return document
 
 

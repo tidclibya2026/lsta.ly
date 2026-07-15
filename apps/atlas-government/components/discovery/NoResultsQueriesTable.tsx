@@ -1,0 +1,1 @@
+export function NoResultsQueriesTable({items}:{items:Array<{normalized_query:string;no_result_searches:number}>}){return <section className="discoveryPanel"><h2>عمليات بلا نتائج</h2>{items.length?items.map(item=><p key={item.normalized_query}>{item.normalized_query} — {item.no_result_searches}</p>):<p>لا توجد بيانات.</p>}</section>}

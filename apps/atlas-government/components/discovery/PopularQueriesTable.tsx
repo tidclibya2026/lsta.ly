@@ -1,0 +1,1 @@
+export function PopularQueriesTable({items}:{items:Array<{normalized_query:string;total_searches:number}>}){return <section className="discoveryPanel"><h2>الأكثر بحثًا</h2>{items.length?items.map(item=><p key={item.normalized_query}>{item.normalized_query} — {item.total_searches}</p>):<p>لا توجد بيانات.</p>}</section>}

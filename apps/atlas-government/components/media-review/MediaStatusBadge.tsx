@@ -1,0 +1,1 @@
+import { Badge } from "@/components/ui/Badge";export function MediaStatusBadge({status}:{status:string}){return <Badge tone={status.includes("approved")?"success":status==="rejected"?"danger":"warning"}>{status}</Badge>}

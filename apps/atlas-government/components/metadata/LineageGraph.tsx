@@ -1,0 +1,2 @@
+import type { LineageGraph as Graph } from "@/lib/api/metadata-types";
+export function LineageGraph({graph}:{graph:Graph}){return <div className="lineageGraph" role="img" aria-label="مسار أصل البيانات">{graph.nodes.map((node,index)=><div className={`lineageNode ${node.type}`} key={node.id}><small>{node.type}</small><strong>{node.title}</strong>{index<graph.nodes.length-1&&<span aria-hidden="true">←</span>}</div>)}</div>}

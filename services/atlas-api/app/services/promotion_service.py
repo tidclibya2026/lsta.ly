@@ -18,6 +18,7 @@ from app.models import (
     SiteGeometry,
     VerificationRecord,
 )
+from app.services.data_lineage_service import link_site_to_geometry, link_staging_to_national_site
 from app.services.review_service import calculate_promotion_eligibility
 
 
@@ -75,7 +76,11 @@ def promote_feature(
         session.flush()
         if fail_after_site:
             raise RuntimeError("forced promotion failure")
-        session.add(SiteGeometry(site_id=site.id, geometry_type=feature.geometry_type, geometry=feature.geometry))
+        geometry = SiteGeometry(site_id=site.id, geometry_type=feature.geometry_type, geometry=feature.geometry)
+        session.add(geometry)
+        session.flush()
+        link_staging_to_national_site(session, str(feature.id), national_id)
+        link_site_to_geometry(session, national_id, str(geometry.id))
         session.add(
             VerificationRecord(
                 site_id=site.id, verification_status="approved", notes="اعتماد نهائي عبر دورة مراجعة Government Alpha"

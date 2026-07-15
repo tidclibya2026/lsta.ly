@@ -1,0 +1,1 @@
+export function ExecutiveMetadataHealth({entries=0,completeness=0}:{entries?:number;completeness?:number}){return <section className="executivePanel"><h2>البيانات الوصفية</h2><p>المدخلات: {entries}</p><p>الاكتمال: {completeness}%</p></section>}

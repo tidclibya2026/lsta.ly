@@ -1,0 +1,1 @@
+import{ExecutiveQualityPanel}from"@/components/executive/ExecutiveQualityPanel";import{GovernmentShell}from"@/components/layout/GovernmentShell";export default function Page(){return <GovernmentShell active="جودة البيانات"><main className="executivePage"><h1>جودة البيانات الوطنية</h1><ExecutiveQualityPanel quality={0} completeness={0} invalid={0}/></main></GovernmentShell>}
