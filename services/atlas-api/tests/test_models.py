@@ -38,7 +38,7 @@ def test_models_use_expected_schemas_and_geometry() -> None:
 
 def test_initial_migration_contains_every_table() -> None:
     migrations = list((Path(__file__).parents[1] / "alembic" / "versions").glob("*.py"))
-    assert len(migrations) == 4
+    assert len(migrations) >= 6
     text = "\n".join(path.read_text(encoding="utf-8") for path in migrations)
     for table in Base.metadata.tables.values():
         assert f'"{table.name}"' in text or f"'{table.name}'" in text

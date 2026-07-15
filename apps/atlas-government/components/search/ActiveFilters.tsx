@@ -1,0 +1,2 @@
+import { Badge } from "@/components/ui/Badge";import type { SearchFilters } from "@/lib/api/search-types";
+export function ActiveFilters({value}:{value:SearchFilters}){const items=[value.source!=="all"?value.source:null,value.geometry_type,value.verification_status,value.has_name?"المسماة فقط":null,value.has_images?"بها صور":null].filter(Boolean);return <div className="activeFilters">{items.map(item=><Badge tone="info" key={String(item)}>{String(item)}</Badge>)}</div>}

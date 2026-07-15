@@ -1,0 +1,2 @@
+import Link from "next/link";import type { AutocompleteItem } from "@/lib/api/search-types";
+export function AutocompletePanel({items,onSelect}:{items:AutocompleteItem[];onSelect?:()=>void}){if(!items.length)return null;return <div className="autocompletePanel" role="listbox">{items.map((item,index)=><Link role="option" href={item.detail_url} onClick={onSelect} key={`${item.detail_url}-${index}`}><strong>{item.label}</strong><small>{item.source}{item.national_id?` · ${item.national_id}`:""}</small></Link>)}</div>}

@@ -17,6 +17,7 @@ import { Dialog } from "@/components/ui/Dialog";
 import { Tabs } from "@/components/ui/Tabs";
 import { REVIEWER_ROLE, reviewApi } from "@/lib/api/review";
 import type { ReviewDecision, ReviewFeatureDetails, ReviewStage } from "@/lib/api/types";
+import { isStaticDemo } from "@/lib/deployment-path";
 
 function SingleFeatureMap({ feature }: { feature: ReviewFeatureDetails }) {
   const container = useRef<HTMLDivElement>(null);
@@ -50,10 +51,11 @@ export default function ReviewFeaturePage() {
   const [stage, setStage] = useState<ReviewStage>("technical");
   const [notes, setNotes] = useState("");
   const [saving, setSaving] = useState(false);
-  const load = useCallback(async () => { setLoading(true); setError(""); try { setFeature(await reviewApi.feature(featureId)); } catch (reason) { setError(reason instanceof Error ? reason.message : "تعذر تحميل السجل"); } finally { setLoading(false); } }, [featureId]);
+  const load = useCallback(async () => { if (isStaticDemo()) { setLoading(false); return; } setLoading(true); setError(""); try { setFeature(await reviewApi.feature(featureId)); } catch (reason) { setError(reason instanceof Error ? reason.message : "تعذر تحميل السجل"); } finally { setLoading(false); } }, [featureId]);
   useEffect(() => { void load(); }, [load]);
   const submit = async () => { if (!dialog) return; setSaving(true); try { await reviewApi.review(featureId, { review_stage: stage, decision: dialog, notes, reviewer_role: REVIEWER_ROLE }); setDialog(null); setNotes(""); await load(); } catch (reason) { setError(reason instanceof Error ? reason.message : "تعذر حفظ القرار"); } finally { setSaving(false); } };
   const promote = async () => { setSaving(true); try { await reviewApi.promote(featureId); await load(); } catch (reason) { setError(reason instanceof Error ? reason.message : "تعذر ترقية السجل"); } finally { setSaving(false); } };
+  if (isStaticDemo()) return <GovernmentShell active="المراجعة الوطنية"><div className="reviewPage"><PageHeader title="بوابة المراجعة الوطنية" /><Card><h2>بوابة المراجعة التشغيلية متاحة داخل البيئة الحكومية الداخلية.</h2><p>لا تُعرض تفاصيل المراجعة أو التدقيق في النسخة العامة.</p></Card></div></GovernmentShell>;
   if (loading) return <GovernmentShell active="المراجعة الوطنية"><div className="reviewLoading"><LoadingSpinner /></div></GovernmentShell>;
   if (error && !feature) return <GovernmentShell active="المراجعة الوطنية"><ErrorState description={error} action={<Button onClick={() => void load()}>إعادة المحاولة</Button>} /></GovernmentShell>;
   if (!feature) return null;

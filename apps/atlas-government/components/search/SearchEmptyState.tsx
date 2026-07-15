@@ -1,0 +1,1 @@
+import { EmptyState } from "@/components/feedback/EmptyState";export function SearchEmptyState({hasQuery}:{hasQuery:boolean}){return <EmptyState title={hasQuery?"لا توجد نتائج مطابقة":"ابدأ بكتابة كلمتين للبحث"} description="يمكنك البحث بالاسم العربي أو الإنجليزي أو المعرّف الوطني."/>}

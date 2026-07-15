@@ -21,7 +21,7 @@ from sqlalchemy import (
     func,
     text,
 )
-from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy.dialects.postgresql import JSONB, TSVECTOR
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
@@ -93,6 +93,7 @@ class Site(UUIDPrimaryKey, Base):
         status_check("verification_status", VERIFICATION_STATUSES, "sites_verification_status"),
         Index("ix_sites_name_ar_trgm", "name_ar", postgresql_using="gin", postgresql_ops={"name_ar": "gin_trgm_ops"}),
         Index("ix_sites_name_en_trgm", "name_en", postgresql_using="gin", postgresql_ops={"name_en": "gin_trgm_ops"}),
+        Index("ix_sites_search_vector_gin", "search_vector", postgresql_using="gin"),
         {"schema": "atlas"},
     )
     national_id: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
@@ -109,6 +110,9 @@ class Site(UUIDPrimaryKey, Base):
     primary_media_id: Mapped[uuid.UUID | None] = mapped_column(Uuid(as_uuid=True))
     approved_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     approved_by: Mapped[uuid.UUID | None] = mapped_column(Uuid(as_uuid=True))
+    normalized_name_ar: Mapped[str | None] = mapped_column(Text)
+    normalized_name_en: Mapped[str | None] = mapped_column(Text)
+    search_vector: Mapped[Any | None] = mapped_column(TSVECTOR)
 
 
 class SiteGeometry(UUIDPrimaryKey, Base):
@@ -379,6 +383,13 @@ class ImportFeature(UUIDPrimaryKey, Base):
         Index("ix_import_features_geometry_gist", "geometry", postgresql_using="gist"),
         Index("ix_import_features_batch_id", "batch_id"),
         Index("ix_import_features_source_feature_id", "source_feature_id"),
+        Index(
+            "ix_import_features_name_ar_trgm",
+            "name_ar",
+            postgresql_using="gin",
+            postgresql_ops={"name_ar": "gin_trgm_ops"},
+        ),
+        Index("ix_import_features_search_vector_gin", "search_vector", postgresql_using="gin"),
         {"schema": "staging"},
     )
     batch_id: Mapped[uuid.UUID] = mapped_column(
@@ -397,6 +408,8 @@ class ImportFeature(UUIDPrimaryKey, Base):
     proposed_municipality_code: Mapped[str | None] = mapped_column(String(80))
     promotion_eligible: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False, server_default="false")
     reviewed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    normalized_name_ar: Mapped[str | None] = mapped_column(Text)
+    search_vector: Mapped[Any | None] = mapped_column(TSVECTOR)
     batch: Mapped[ImportBatch] = relationship(back_populates="features")
 
 

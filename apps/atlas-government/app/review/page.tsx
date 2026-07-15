@@ -13,8 +13,10 @@ import { GovernmentShell } from "@/components/layout/GovernmentShell";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 import { reviewApi } from "@/lib/api/review";
 import type { PaginatedFeatures, ReviewFeature, ReviewSummary } from "@/lib/api/types";
+import { isStaticDemo } from "@/lib/deployment-path";
 
 const LIMIT = 25;
 const statusLabel: Record<string, string> = { pending_review: "قيد المراجعة", accepted: "مقبول", rejected: "مرفوض", needs_correction: "يحتاج تصحيح" };
@@ -26,9 +28,10 @@ export default function ReviewPage() {
   const [offset, setOffset] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const load = useCallback(async () => { setLoading(true); setError(""); try { const [metrics, features] = await Promise.all([reviewApi.summary(), reviewApi.features({ ...filters, limit: LIMIT, offset })]); setSummary(metrics); setData(features); } catch (reason) { setError(reason instanceof Error ? reason.message : "تعذر تحميل البيانات"); } finally { setLoading(false); } }, [filters, offset]);
+  const load = useCallback(async () => { if (isStaticDemo()) { setLoading(false); return; } setLoading(true); setError(""); try { const [metrics, features] = await Promise.all([reviewApi.summary(), reviewApi.features({ ...filters, limit: LIMIT, offset })]); setSummary(metrics); setData(features); } catch (reason) { setError(reason instanceof Error ? reason.message : "تعذر تحميل البيانات"); } finally { setLoading(false); } }, [filters, offset]);
   useEffect(() => { void load(); }, [load]);
 
+  if (isStaticDemo()) return <GovernmentShell active="المراجعة الوطنية"><div className="reviewPage"><PageHeader eyebrow="Government Alpha" title="بوابة المراجعة الوطنية" /><Card><h2>بوابة المراجعة التشغيلية متاحة داخل البيئة الحكومية الداخلية.</h2><p>لا تتضمن نسخة العرض العام سجلات Staging أو قرارات المراجعين أو إجراءات الاعتماد والترقية.</p></Card></div></GovernmentShell>;
   const columns: DataColumn<ReviewFeature>[] = [
     { key: "name", header: "السجل", render: (row) => <div><strong>{row.name_ar || "عنصر بلا اسم"}</strong><small className="reviewMuted">{row.source_feature_id}</small></div> },
     { key: "geometry", header: "الهندسة", render: (row) => row.geometry_type },

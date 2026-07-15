@@ -1,0 +1,1 @@
+export function SearchFacets({facets}:{facets:Record<string,Record<string,number>>|null}){if(!facets)return null;return <section className="searchFacet"><h3>توزيع المصادر</h3>{Object.entries(facets.source_counts||{}).map(([key,value])=><p key={key}><span>{key}</span><strong>{value}</strong></p>)}</section>}

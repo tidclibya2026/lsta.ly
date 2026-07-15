@@ -1,12 +1,14 @@
 import type { FeatureFilters, PaginatedFeatures, ReviewFeatureDetails, ReviewPayload, ReviewSummary } from "./types";
+import { isStaticDemo } from "../deployment-path";
 
-const API_URL = process.env.NEXT_PUBLIC_LSTA_API_URL || "http://localhost:8000";
+const API_URL = process.env.NEXT_PUBLIC_LSTA_API_URL || "http://127.0.0.1:8000";
 const REVIEWER_ROLE = process.env.NEXT_PUBLIC_LSTA_REVIEWER_ROLE || "reviewer";
 const TIMEOUT_MS = 12_000;
 
 export class LstaApiError extends Error { constructor(message: string, public status?: number) { super(message); } }
 
 async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
+  if (isStaticDemo()) throw new LstaApiError("بوابة المراجعة متاحة داخل البيئة الحكومية الداخلية فقط", 403);
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {

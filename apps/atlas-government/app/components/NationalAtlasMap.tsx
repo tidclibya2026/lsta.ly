@@ -9,6 +9,7 @@ import { LayerTree } from "@/components/maps/LayerTree";
 import { MapFeatureDrawer, type MapSelectedFeature } from "@/components/maps/MapFeatureDrawer";
 import { MapLegend } from "@/components/maps/MapLegend";
 import { MapToolbar } from "@/components/maps/MapToolbar";
+import { isStaticDemo, withBasePath } from "@/lib/deployment-path";
 
 const LIBYA_CENTER: [number, number] = [17.2283, 27.5];
 const TRIPOLI_CENTER: [number, number] = [13.18, 32.895];
@@ -88,7 +89,8 @@ export default function NationalAtlasMap() {
     if (reviewLoaded.current) { applyReviewFilter(map, reviewFilter); map.flyTo({ center: TRIPOLI_CENTER, zoom: 14 }); return; }
     setReviewLoading(true);
     try {
-      const response = await fetch("/data/review/old_tripoli.geojson", { cache: "no-store" }); if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const path = isStaticDemo() ? "/data/demo/demo-map.geojson" : "/data/review/old_tripoli.geojson";
+      const response = await fetch(withBasePath(path), { cache: "no-store" }); if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const raw = await response.json() as { type?: unknown; features?: unknown };
       if (!Array.isArray(raw.features) || raw.features.length === 0) throw new Error("ملف GeoJSON فارغ");
       const results = raw.features.map((item, index) => convertReviewFeature(item as RawGeoJSONFeature, index));

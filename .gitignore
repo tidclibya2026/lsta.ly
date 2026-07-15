@@ -23,3 +23,16 @@ apps/atlas-government/tsconfig.tsbuildinfo
 # أسرار البنية التحتية المحلية
 infrastructure/.env
 services/atlas-api/.env
+
+# Sensitive or local-only data
+data/raw/
+data/staging/
+*.kml
+*.kmz
+*.sqlite
+*.db
+backups/
+logs/
+secrets/
+credentials/
+apps/atlas-government/out/
