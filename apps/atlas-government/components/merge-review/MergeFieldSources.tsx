@@ -1,0 +1,1 @@
+export function MergeFieldSources({sources}:{sources:Record<string,unknown>}){return <section className="mergePanel"><h2>مصدر الحقول</h2>{Object.entries(sources).map(([k,v])=><p key={k}><b>{k}</b>: {String(v)}</p>)}</section>}

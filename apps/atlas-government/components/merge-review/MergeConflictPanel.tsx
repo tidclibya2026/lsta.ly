@@ -1,0 +1,1 @@
+export function MergeConflictPanel({severity,items}:{severity:string;items:unknown[]}){return <section className={`mergePanel conflict-${severity}`}><h2>التعارضات · {severity}</h2>{items.length?<ul>{items.map((x,i)=><li key={i}>{String(x)}</li>)}</ul>:<p>لا توجد تعارضات مسجلة.</p>}</section>}

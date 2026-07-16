@@ -1,0 +1,1 @@
+export function BulkDecisionDialog({count,onPreview}:{count:number;onPreview:()=>void}){return <div className="mergePanel"><b>{count} عنصرًا محددًا</b><button disabled={!count} onClick={onPreview}>معاينة القرار الجماعي</button><small>المعاينة لا تكتب أي قرار.</small></div>}

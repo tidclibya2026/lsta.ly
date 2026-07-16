@@ -1,0 +1,17 @@
+layer_code: resorts
+entity_type: resort
+excel_sheet: القرى والمنتجعات
+excel_id_field: Master_ID
+name_ar_field: الاسم العربي
+name_en_field: الاسم الإنجليزي
+municipality_field: البلدية
+latitude_field: خط العرض
+longitude_field: خط الطول
+category_field: كود التصنيف
+kml_folder_filters: [القرى والمنتجعات]
+business_attribute_fields: [الغرف, الأسرة, الطاقة الاستيعابية, الهاتف, الترخيص]
+spatial_fields: [latitude, longitude, geometry]
+merge_weights: {name: 0.55, distance: 0.30, municipality: 0.10, category: 0.05}
+distance_thresholds: {ready_merge_meters: 100, review_meters: 500, maximum_candidate_meters: 1000}
+required_fields: [Master_ID, الاسم العربي]
+review_rules: {minimum_candidate_score: 65, automatic_merge: false, one_to_one: true}
