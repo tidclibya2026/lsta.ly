@@ -1,0 +1,1 @@
+import type{ExecutionBatch}from"@/lib/api/merge-execution-types";export function ExecutionProgressPanel({batch}:{batch:ExecutionBatch}){return <section><h2>التقدم</h2><progress max={batch.requested_proposal_count||1}value={batch.executed_proposal_count}/><p>{batch.executed_proposal_count} منفذ، {batch.failed_proposal_count} فاشل</p></section>}
