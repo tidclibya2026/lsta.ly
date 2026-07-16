@@ -893,3 +893,72 @@ class MergeDecision(UUIDPrimaryKey, Base):
     decision_metadata: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
     decided_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     proposal: Mapped[MergeProposal] = relationship(back_populates="decisions")
+
+
+class MergeExecutionBatch(UUIDPrimaryKey, Base):
+    __tablename__ = "merge_execution_batches"
+    __table_args__ = (
+        status_check("execution_mode", ("dry_run", "controlled_execution", "rollback_preview"), "merge_execution_batches_mode"),
+        status_check("status", ("draft", "validated", "blocked", "approved_for_execution", "running", "completed", "completed_with_errors", "failed", "cancelled", "rolled_back"), "merge_execution_batches_status"),
+        UniqueConstraint("execution_code", name="uq_merge_execution_batches_code"),
+        Index("ix_merge_execution_batches_merge_batch", "merge_batch_id", "status"),
+        {"schema": "staging"},
+    )
+    execution_code: Mapped[str] = mapped_column(String(160), nullable=False)
+    merge_batch_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("staging.merge_batches.id"), nullable=False)
+    requested_proposal_count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    eligible_proposal_count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    executed_proposal_count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    failed_proposal_count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    skipped_proposal_count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    execution_mode: Mapped[str] = mapped_column(String(30), nullable=False, default="dry_run")
+    status: Mapped[str] = mapped_column(String(40), nullable=False, default="draft")
+    requested_by_role: Mapped[str] = mapped_column(String(100), nullable=False)
+    requested_by_reference: Mapped[str | None] = mapped_column(String(150))
+    dry_run_report: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    validation_summary: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    started_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False)
+    items: Mapped[list["MergeExecutionItem"]] = relationship(back_populates="execution_batch", lazy="selectin", cascade="all, delete-orphan")
+
+
+class MergeExecutionItem(UUIDPrimaryKey, Base):
+    __tablename__ = "merge_execution_items"
+    __table_args__ = (
+        status_check("operation_type", ("create_national_site", "update_existing_site", "keep_separate", "no_operation"), "merge_execution_items_operation"),
+        status_check("execution_status", ("pending", "eligible", "blocked", "executing", "completed", "failed", "skipped", "rolled_back"), "merge_execution_items_status"),
+        UniqueConstraint("execution_batch_id", "proposal_id", name="uq_merge_execution_item_proposal"),
+        Index("ix_merge_execution_items_proposal_status", "proposal_id", "execution_status"),
+        {"schema": "staging"},
+    )
+    execution_batch_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("staging.merge_execution_batches.id", ondelete="CASCADE"), nullable=False)
+    proposal_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("staging.merge_proposals.id"), nullable=False)
+    operation_type: Mapped[str] = mapped_column(String(40), nullable=False)
+    target_site_id: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("atlas.sites.id"))
+    target_national_id: Mapped[str | None] = mapped_column(String(100))
+    pre_merge_snapshot: Mapped[dict[str, Any] | None] = mapped_column(JSONB)
+    proposed_snapshot: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    field_merge_plan: Mapped[list[Any]] = mapped_column(JSONB, nullable=False, default=list)
+    validation_results: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    execution_status: Mapped[str] = mapped_column(String(30), nullable=False, default="pending")
+    error_code: Mapped[str | None] = mapped_column(String(100))
+    error_message: Mapped[str | None] = mapped_column(Text)
+    executed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False)
+    execution_batch: Mapped[MergeExecutionBatch] = relationship(back_populates="items")
+
+
+class MergeExecutionEvent(UUIDPrimaryKey, Base):
+    __tablename__ = "merge_execution_events"
+    __table_args__ = (Index("ix_merge_execution_events_batch_time", "execution_batch_id", "occurred_at"), {"schema": "audit"})
+    execution_batch_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("staging.merge_execution_batches.id", ondelete="CASCADE"), nullable=False)
+    execution_item_id: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("staging.merge_execution_items.id", ondelete="CASCADE"))
+    proposal_id: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("staging.merge_proposals.id"))
+    event_type: Mapped[str] = mapped_column(String(50), nullable=False)
+    actor_role: Mapped[str] = mapped_column(String(100), nullable=False)
+    actor_reference: Mapped[str | None] = mapped_column(String(150))
+    event_payload: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    occurred_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)

@@ -1,0 +1,5 @@
+export type ExecutionStatus="draft"|"validated"|"blocked"|"approved_for_execution"|"running"|"completed"|"completed_with_errors"|"failed"|"cancelled"|"rolled_back";
+export interface ExecutionBatch{id:string;execution_code:string;status:ExecutionStatus;execution_mode:string;requested_proposal_count:number;eligible_proposal_count:number;executed_proposal_count:number;failed_proposal_count:number;dry_run_report:Record<string,unknown>;validation_summary:Record<string,unknown>}
+export interface FieldChange{field:string;current_value:unknown;proposed_value:unknown;source:string;action:"update"|"keep"|"skip"|"conflict";reason:string;requires_confirmation:boolean}
+export interface ExecutionPreview{proposal_id:string;operation_type:string;target_site:Record<string,unknown>|null;field_merge_plan:FieldChange[];change_summary:Record<string,number>;geometry:Record<string,unknown>;media:unknown[];warnings:unknown[];lineage:string[];previous_versions:number}
+export interface ExecutionEvent{event_type:string;event_payload:Record<string,unknown>;occurred_at:string}

@@ -1,0 +1,1 @@
+import type{ExecutionPreview}from"@/lib/api/merge-execution-types";import{FieldChangeTable}from"./FieldChangeTable";export function ExecutionPreviewPanel({data}:{data:ExecutionPreview}){return <section><h2>معاينة التنفيذ</h2><p>العملية: {data.operation_type} — الإصدارات السابقة: {data.previous_versions}</p><FieldChangeTable rows={data.field_merge_plan}/></section>}

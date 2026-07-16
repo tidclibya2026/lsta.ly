@@ -1,0 +1,1 @@
+import type{ExecutionEvent}from"@/lib/api/merge-execution-types";export function ExecutionAuditTimeline({events}:{events:ExecutionEvent[]}){return <ol>{events.map((e,i)=><li key={`${e.occurred_at}-${i}`}><b>{e.event_type}</b> {new Date(e.occurred_at).toLocaleString("ar-LY")}</li>)}</ol>}
