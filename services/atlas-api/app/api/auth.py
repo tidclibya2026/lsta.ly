@@ -10,6 +10,8 @@ ALLOWED_REVIEWER_ROLES = {
     "gis_specialist",
     "viewer",
     "decision_maker",
+    "technical_reviewer",
+    "data_reviewer",
 }
 
 
