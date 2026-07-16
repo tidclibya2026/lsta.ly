@@ -1,0 +1,16 @@
+{
+  "backend_total": 56,
+  "backend_passed": 56,
+  "backend_failed": 0,
+  "frontend_total": 24,
+  "frontend_passed": 24,
+  "frontend_failed": 0,
+  "merge_engine_total": 2,
+  "merge_engine_passed": 2,
+  "ruff_status": "passed",
+  "typecheck_status": "passed",
+  "build_status": "passed",
+  "migration_head": "d3f40a91b672",
+  "migration_heads": 1,
+  "database_integrity_status": "passed"
+}
