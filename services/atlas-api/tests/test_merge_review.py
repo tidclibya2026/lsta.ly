@@ -10,7 +10,16 @@ from app.api.deps import get_db
 from app.core.config import get_settings
 from app.db.session import create_database_engine
 from app.main import app
-from app.models import MergeBatch, MergeDecision, MergeProposal, PromotionRecord, Site
+from app.models import (
+    MergeBatch,
+    MergeDecision,
+    MergeExecutionBatch,
+    MergeExecutionEvent,
+    MergeExecutionItem,
+    MergeProposal,
+    PromotionRecord,
+    Site,
+)
 from app.services.merge_proposal_import_service import import_merge_proposals
 from app.services.merge_review_service import bulk_decision_preview, get_merge_summary, submit_merge_decision
 
@@ -37,7 +46,7 @@ def _inputs() -> dict[str, Path]:
 
 
 def test_idempotent_import_and_no_registry_writes(merge_session: Session) -> None:
-    merge_session.execute(delete(MergeDecision)); merge_session.execute(delete(MergeProposal)); merge_session.execute(delete(MergeBatch)); merge_session.flush()
+    merge_session.execute(delete(MergeExecutionEvent));merge_session.execute(delete(MergeExecutionItem));merge_session.execute(delete(MergeExecutionBatch));merge_session.execute(delete(MergeDecision));merge_session.execute(delete(MergeProposal));merge_session.execute(delete(MergeBatch));merge_session.flush()
     sites, promotions = merge_session.scalar(select(func.count()).select_from(Site)), merge_session.scalar(select(func.count()).select_from(PromotionRecord))
     first = import_merge_proposals(merge_session, **_inputs())
     second = import_merge_proposals(merge_session, **_inputs())

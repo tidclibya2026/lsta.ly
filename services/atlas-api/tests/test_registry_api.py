@@ -40,7 +40,7 @@ def test_registry_list_details_pagination_and_filters(registry: tuple[TestClient
     client, _, site = registry
     page = client.get("/api/v1/registry/sites", params={"limit": 1, "verification_status": site.verification_status})
     assert page.status_code == 200
-    assert page.json()["total"] == 1
+    assert page.json()["total"] == registry[1].scalar(select(func.count()).select_from(Site).where(Site.verification_status == site.verification_status))
     assert page.json()["items"][0]["national_id"] == site.national_id
     details = client.get(f"/api/v1/registry/sites/{site.national_id}")
     assert details.status_code == 200
