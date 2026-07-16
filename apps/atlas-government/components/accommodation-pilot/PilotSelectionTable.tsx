@@ -1,0 +1,1 @@
+import type{PilotCandidate}from"@/lib/api/accommodation-pilot-types";export function PilotSelectionTable({rows}:{rows:PilotCandidate[]}){return rows.length?<table><thead><tr><th>الاسم</th><th>درجة السلامة</th></tr></thead><tbody>{rows.map(x=><tr key={x.proposal_id}><td>{x.name}</td><td>{x.safety_score}%</td></tr>)}</tbody></table>:<p>لا توجد عناصر.</p>}

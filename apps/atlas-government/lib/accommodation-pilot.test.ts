@@ -1,0 +1,4 @@
+import test from"node:test";import assert from"node:assert/strict";import{canExecutePilot,canSelectPilot,PILOT_INTERNAL_MESSAGE}from"./api/accommodation-pilot";
+test("Pilot requires exactly five",()=>{assert.equal(canSelectPilot(5),true);assert.equal(canSelectPilot(4),false);assert.equal(canSelectPilot(6),false)});
+test("execution requires authorization confirmation and GO",()=>{const b={id:"x",status:"approved_for_execution",items:5,dry_run:{}};const r={go_no_go:"go"as const,checks:{},reasons:[],evaluated_at:""};assert.equal(canExecutePilot(b,"EXECUTE PILOT 5 APPROVED HOTELS",r),true);assert.equal(canExecutePilot(b,"bad",r),false);assert.equal(canExecutePilot(b,"EXECUTE PILOT 5 APPROVED HOTELS",{...r,go_no_go:"no_go"}),false)});
+test("static internal message does not expose identifiers",()=>assert.equal(PILOT_INTERNAL_MESSAGE.includes("proposal"),false));
