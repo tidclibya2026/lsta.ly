@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from app.models import MergeProposal, Site
 from app.models.tables import MergeExecutionItem
 
-AUTHORIZED_DECISION_ROLES = {"data_manager", "system_admin", "decision_maker"}
+AUTHORIZED_DECISION_ROLES = {"data_manager", "system_admin", "decision_maker", "pilot_final_authorizer"}
 
 
 def validate_latest_decision(proposal):

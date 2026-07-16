@@ -80,6 +80,7 @@ def create_national_site_from_merge(session, item):
     p = session.get(MergeProposal, item.proposal_id); s = Site(national_id=_national_id(session), name_ar=p.proposed_site.get("name_ar") or p.proposed_site["name"], name_en=p.proposed_site.get("name_en"), description=p.proposed_site.get("description"), verification_status="approved")
     session.add(s); session.flush(); item.target_site_id=s.id; item.target_national_id=s.national_id
     session.add(SiteProfile(site_id=s.id, contact_information=p.excel_snapshot.get("contact_information", {}), internal_notes="Created by controlled merge execution"))
+    create_site_version(session, s, {"national_id": s.national_id, "name_ar": s.name_ar, "state": "created"})
     return s
 
 
