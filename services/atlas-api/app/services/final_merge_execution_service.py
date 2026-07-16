@@ -122,6 +122,8 @@ def execute_item(session, batch, item, role):
     if item.execution_status != "eligible": return
     try:
         with session.begin_nested():
+            if item.operation_type == "create_national_site" and not item.pre_merge_snapshot:
+                item.pre_merge_snapshot = {"state": "absent", "restore_action": "archive_created_site"}
             item.execution_status="executing"; site=create_national_site_from_merge(session,item) if item.operation_type=="create_national_site" else update_national_site_from_merge(session,item)
             proposal=session.get(MergeProposal,item.proposal_id); geometry=apply_geometry_changes(session,site,proposal); media=link_approved_media(session,site,proposal)
             session.add(SiteQualitySnapshot(site_id=site.id,overall_score=80,score_breakdown={"merge":80},critical_issues=[],warnings=[],calculated_by="merge_execution",source_version=ENGINE_VERSION))
