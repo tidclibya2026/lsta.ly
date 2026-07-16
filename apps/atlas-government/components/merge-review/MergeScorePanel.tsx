@@ -1,0 +1,1 @@
+export function MergeScorePanel({score,name,distance}:{score:number;name:number;distance:number|null}){return <section className="mergePanel"><h2>درجة المطابقة</h2><strong className="mergeScore">{score}%</strong><p>تشابه الاسم: {name}%</p><p>المسافة: {distance??"غير متاحة"} متر</p></section>}

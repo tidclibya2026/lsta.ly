@@ -1,0 +1,1 @@
+import type{MergeBatch}from"@/lib/api/merge-review-types";export function MergeBatchCard({batch,onOpen}:{batch:MergeBatch;onOpen:()=>void}){return <article className="mergeBatch dsCard"><h2>{batch.entity_type}</h2><code>{batch.batch_code}</code><p>{batch.proposal_count} مقترح · {batch.status}</p><button onClick={onOpen}>فتح الدفعة</button></article>}

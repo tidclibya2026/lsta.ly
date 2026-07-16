@@ -1,0 +1,1 @@
+export function MergeHistoryPanel({items}:{items:Array<Record<string,unknown>>}){return <section className="mergePanel"><h2>تاريخ القرارات</h2>{items.length?items.map((x,i)=><article key={i}><b>{String(x.decision)}</b><p>{String(x.reviewer_notes||"")}</p></article>):<p>لا توجد قرارات.</p>}</section>}

@@ -818,3 +818,78 @@ class ExecutiveServiceHealth(UUIDPrimaryKey, Base):
     details: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
     checked_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class MergeBatch(UUIDPrimaryKey, Base):
+    __tablename__ = "merge_batches"
+    __table_args__ = (
+        UniqueConstraint("batch_code", name="uq_merge_batches_batch_code"),
+        Index("ix_merge_batches_entity_status", "entity_type", "status"),
+        {"schema": "staging"},
+    )
+    batch_code: Mapped[str] = mapped_column(String(100), nullable=False)
+    entity_type: Mapped[str] = mapped_column(String(50), nullable=False)
+    excel_file_name: Mapped[str] = mapped_column(Text, nullable=False)
+    excel_sha256: Mapped[str] = mapped_column(String(64), nullable=False)
+    kml_file_name: Mapped[str] = mapped_column(Text, nullable=False)
+    kml_sha256: Mapped[str] = mapped_column(String(64), nullable=False)
+    excel_record_count: Mapped[int] = mapped_column(Integer, nullable=False)
+    kml_record_count: Mapped[int] = mapped_column(Integer, nullable=False)
+    raw_candidate_count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    proposal_count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    engine_version: Mapped[str] = mapped_column(String(50), nullable=False)
+    matching_parameters: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    status: Mapped[str] = mapped_column(String(40), nullable=False, default="draft")
+    created_by: Mapped[str | None] = mapped_column(String(150))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    proposals: Mapped[list["MergeProposal"]] = relationship(back_populates="batch", lazy="selectin", cascade="all, delete-orphan")
+
+
+class MergeProposal(UUIDPrimaryKey, Base):
+    __tablename__ = "merge_proposals"
+    __table_args__ = (
+        UniqueConstraint("batch_id", "excel_record_id", "kml_record_id", name="uq_merge_proposal_pair"),
+        Index("ix_merge_proposals_batch_status", "batch_id", "review_status"),
+        Index("ix_merge_proposals_candidate_class", "candidate_class"),
+        Index("ix_merge_proposals_conflict_severity", "conflict_severity"),
+        Index("ix_merge_proposals_conflict_fields_gin", "conflict_fields", postgresql_using="gin"),
+        {"schema": "staging"},
+    )
+    batch_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("staging.merge_batches.id", ondelete="CASCADE"), nullable=False)
+    excel_record_id: Mapped[str] = mapped_column(String(150), nullable=False)
+    kml_record_id: Mapped[str] = mapped_column(String(150), nullable=False)
+    excel_name: Mapped[str | None] = mapped_column(Text)
+    kml_name: Mapped[str | None] = mapped_column(Text)
+    confidence_score: Mapped[float] = mapped_column(Numeric(5, 2), nullable=False)
+    name_similarity: Mapped[float] = mapped_column(Numeric(5, 2), nullable=False)
+    distance_meters: Mapped[float | None] = mapped_column(Numeric(12, 2))
+    candidate_class: Mapped[str] = mapped_column(String(40), nullable=False)
+    conflict_severity: Mapped[str] = mapped_column(String(20), nullable=False, default="none")
+    conflict_fields: Mapped[list[Any]] = mapped_column(JSONB, nullable=False, default=list)
+    excel_snapshot: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False)
+    kml_snapshot: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False)
+    proposed_site: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False)
+    field_sources: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False)
+    review_status: Mapped[str] = mapped_column(String(40), nullable=False, default="pending_review")
+    priority: Mapped[str] = mapped_column(String(20), nullable=False, default="normal")
+    assigned_role: Mapped[str | None] = mapped_column(String(100))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    batch: Mapped[MergeBatch] = relationship(back_populates="proposals")
+    decisions: Mapped[list["MergeDecision"]] = relationship(back_populates="proposal", lazy="selectin", cascade="all, delete-orphan", order_by="MergeDecision.decided_at")
+
+
+class MergeDecision(UUIDPrimaryKey, Base):
+    __tablename__ = "merge_decisions"
+    __table_args__ = (Index("ix_merge_decisions_proposal", "proposal_id", "decided_at"), {"schema": "staging"})
+    proposal_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("staging.merge_proposals.id", ondelete="CASCADE"), nullable=False)
+    decision: Mapped[str] = mapped_column(String(50), nullable=False)
+    review_stage: Mapped[str] = mapped_column(String(50), nullable=False, default="merge_review")
+    reviewer_role: Mapped[str] = mapped_column(String(100), nullable=False)
+    reviewer_reference: Mapped[str | None] = mapped_column(String(150))
+    decision_reason: Mapped[str | None] = mapped_column(Text)
+    reviewer_notes: Mapped[str | None] = mapped_column(Text)
+    decision_metadata: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+    decided_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    proposal: Mapped[MergeProposal] = relationship(back_populates="decisions")
