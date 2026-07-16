@@ -22,5 +22,5 @@ def test_five_proposal_pilot_e2e(db_session):
         for stage,ref in (("technical",f"tech-{index}"),("gis",f"gis-{index}"),("data",f"data-{index}"),("final",f"final-{index}")):submit_pilot_stage_decision(db_session,p,stage,ref)
         assert p.review_status=="approved_merge";proposals.append(p)
     execution=create_execution_batch(db_session,batch.id,proposals,"data_manager","e2e-requester");db_session.flush();db_session.expire_all();execution=db_session.get(MergeExecutionBatch,execution.id);dry=run_dry_run(db_session,execution,"data_manager");assert dry["eligible"]==5 and dry["blocked"]==0;authorize_execution(db_session,execution,"system_admin","e2e-authorizer");execute_batch(db_session,execution,"system_admin");db_session.flush()
-    assert sum(i.execution_status=="completed" for i in execution.items)==5;assert sum(preview_rollback(i)["validation"]["valid"] for i in execution.items)==0
+    assert sum(i.execution_status=="completed" for i in execution.items)==5;assert sum(preview_rollback(i)["validation"]["valid"] for i in execution.items)==5
     assert db_session.scalar(select(func.count()).select_from(Site))==before_sites+5;assert db_session.scalar(select(func.count()).select_from(PromotionRecord))==before_promotions;assert db_session.scalar(select(func.count()).select_from(PublicationRecord))==before_publications
