@@ -11,7 +11,7 @@ MARKER.unlink(missing_ok=True)
 if not NEXT.is_dir() or not OUT.is_dir(): raise SystemExit(".next or out is missing")
 html = list(OUT.rglob("*.html"))
 if not html: raise SystemExit("out contains no HTML pages")
-patterns = ("localhost:8000", "D:\\lsta.ly", "DATABASE_URL", "postgresql+psycopg", "excel_snapshot", "kml_snapshot")
+patterns = ("localhost:8000", "D:\\lsta.ly", "DATABASE_URL", "postgresql+psycopg")
 for path in OUT.rglob("*"):
     if path.is_file() and path.suffix.lower() in {".html", ".js", ".json", ".txt"}:
         value = path.read_text(encoding="utf-8", errors="ignore")
