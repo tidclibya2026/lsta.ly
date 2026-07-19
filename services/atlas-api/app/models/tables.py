@@ -893,7 +893,6 @@ class MergeDecision(UUIDPrimaryKey, Base):
     decision_metadata: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
     decided_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     proposal: Mapped[MergeProposal] = relationship(back_populates="decisions")
-<<<<<<< HEAD
 
 
 class MergeExecutionBatch(UUIDPrimaryKey, Base):
@@ -963,5 +962,3 @@ class MergeExecutionEvent(UUIDPrimaryKey, Base):
     actor_reference: Mapped[str | None] = mapped_column(String(150))
     event_payload: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
     occurred_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
-=======
->>>>>>> origin/main

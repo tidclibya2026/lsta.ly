@@ -21,12 +21,9 @@ from .tables import (
     MediaReviewItem,
     MergeBatch,
     MergeDecision,
-<<<<<<< HEAD
     MergeExecutionBatch,
     MergeExecutionEvent,
     MergeExecutionItem,
-=======
->>>>>>> origin/main
     MergeProposal,
     Municipality,
     PromotionRecord,
@@ -60,12 +57,9 @@ __all__ = [
     "MediaReviewItem",
     "MergeBatch",
     "MergeDecision",
-<<<<<<< HEAD
     "MergeExecutionBatch",
     "MergeExecutionEvent",
     "MergeExecutionItem",
-=======
->>>>>>> origin/main
     "MergeProposal",
     "Municipality",
     "PublicationRecord",

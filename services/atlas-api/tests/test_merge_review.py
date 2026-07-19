@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ﻿from collections.abc import Generator
-=======
-from collections.abc import Generator
->>>>>>> origin/main
 from pathlib import Path
 
 import pytest
@@ -14,7 +10,6 @@ from app.api.deps import get_db
 from app.core.config import get_settings
 from app.db.session import create_database_engine
 from app.main import app
-<<<<<<< HEAD
 from app.models import (
     MergeBatch,
     MergeDecision,
@@ -27,11 +22,6 @@ from app.models import (
 )
 from app.services.merge_proposal_import_service import import_merge_proposals
 from app.services.merge_review_query_service import bulk_decision_preview, get_merge_summary, submit_merge_decision
-=======
-from app.models import MergeBatch, MergeDecision, MergeProposal, PromotionRecord, Site
-from app.services.merge_proposal_import_service import import_merge_proposals
-from app.services.merge_review_service import bulk_decision_preview, get_merge_summary, submit_merge_decision
->>>>>>> origin/main
 
 ROOT = Path(__file__).resolve().parents[3]
 
@@ -52,7 +42,6 @@ def merge_session() -> Generator[Session, None, None]:
 
 
 def _inputs() -> dict[str, Path]:
-<<<<<<< HEAD
     return {
         "excel_path": ROOT / "data/raw/excel/أطلس_ليبيا_السياحي_2026_طبقة_الفنادق.xlsx",
         "kml_path": ROOT / "data/raw/kml/hotels_LY.kml",
@@ -63,13 +52,6 @@ def _inputs() -> dict[str, Path]:
 
 def test_idempotent_import_and_no_registry_writes(merge_session: Session) -> None:
     merge_session.execute(delete(MergeExecutionEvent));merge_session.execute(delete(MergeExecutionItem));merge_session.execute(delete(MergeExecutionBatch));merge_session.execute(delete(MergeDecision));merge_session.execute(delete(MergeProposal));merge_session.execute(delete(MergeBatch));merge_session.flush()
-=======
-    return {"excel_path": ROOT / "data/raw/excel/أطلس_ليبيا_السياحي_2026_طبقة_الفنادق.xlsx", "kml_path": ROOT / "data/raw/kml/hotels_LY.kml", "summary_path": ROOT / "reports/merge/hotels/hotels_kml_excel_match_summary.json", "preview_path": ROOT / "reports/merge/hotels/hotels_merge_preview.json"}
-
-
-def test_idempotent_import_and_no_registry_writes(merge_session: Session) -> None:
-    merge_session.execute(delete(MergeDecision)); merge_session.execute(delete(MergeProposal)); merge_session.execute(delete(MergeBatch)); merge_session.flush()
->>>>>>> origin/main
     sites, promotions = merge_session.scalar(select(func.count()).select_from(Site)), merge_session.scalar(select(func.count()).select_from(PromotionRecord))
     first = import_merge_proposals(merge_session, **_inputs())
     second = import_merge_proposals(merge_session, **_inputs())
@@ -105,18 +87,12 @@ def test_api_visibility_and_missing_record(merge_session: Session) -> None:
     app.dependency_overrides[get_db] = override
     try:
         client = TestClient(app)
-<<<<<<< HEAD
         headers = {"X-LSTA-Reviewer-Role": "reviewer"}
         assert client.get(
             "/api/v1/merge-review/summary",
             headers=headers,
         ).status_code == 200
         assert client.get("/api/v1/merge-review/batches").status_code == 403
-=======
-        assert client.get("/api/v1/merge-review/summary").status_code == 200
-        assert client.get("/api/v1/merge-review/batches").status_code == 403
-        headers = {"X-LSTA-Reviewer-Role": "reviewer"}
->>>>>>> origin/main
         batches = client.get("/api/v1/merge-review/batches", headers=headers).json()["items"]
         response = client.get(f"/api/v1/merge-review/batches/{batches[0]['id']}/proposals", params={"limit": 5, "candidate_class": "ready_merge"}, headers=headers)
         assert response.status_code == 200 and len(response.json()["items"]) == 5
