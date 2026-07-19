@@ -5,7 +5,10 @@ from .accommodation_pilot import router as accommodation_pilot_router
 from .discovery import router as discovery_router
 from .executive import router as executive_router
 from .media_review import router as media_review_router
+<<<<<<< HEAD
 from .merge_execution import router as merge_execution_router
+=======
+>>>>>>> origin/main
 from .merge_review import router as merge_review_router
 from .metadata import router as metadata_router
 from .registry import router as registry_router
@@ -23,6 +26,9 @@ router.include_router(media_review_router)
 router.include_router(discovery_router)
 router.include_router(executive_router)
 router.include_router(merge_review_router)
+<<<<<<< HEAD
 router.include_router(merge_execution_router)
+=======
+>>>>>>> origin/main
 
 __all__ = ["router"]
