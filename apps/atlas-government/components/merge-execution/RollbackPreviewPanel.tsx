@@ -1,0 +1,1 @@
+export function RollbackPreviewPanel({data}:{data:Record<string,unknown>|null}){return <section><h2>معاينة الاسترجاع</h2>{data?<pre>{JSON.stringify(data,null,2)}</pre>:<p>لا توجد معاينة استرجاع.</p>}</section>}

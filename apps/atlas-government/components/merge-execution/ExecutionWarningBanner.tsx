@@ -1,0 +1,1 @@
+export function ExecutionWarningBanner(){return <div role="alert" className="mergeExecutionWarning">هذه الوحدة تنفذ تغييرات فعلية في السجل الوطني. يجب إكمال Dry Run والتحقق والتفويض النهائي قبل التنفيذ.</div>}

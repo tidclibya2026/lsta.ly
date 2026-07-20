@@ -1,0 +1,1 @@
+import type{FieldChange}from"@/lib/api/merge-execution-types";export function FieldChangeTable({rows}:{rows:FieldChange[]}){return <table><thead><tr><th>الحقل</th><th>المصدر</th><th>الإجراء</th><th>السبب</th></tr></thead><tbody>{rows.map(x=><tr key={x.field}><td>{x.field}</td><td>{x.source}</td><td>{x.action}</td><td>{x.reason}</td></tr>)}</tbody></table>}

@@ -36,3 +36,12 @@ logs/
 secrets/
 credentials/
 apps/atlas-government/out/
+# Generated and internal data
+/data/processed/kml/hotels/
+/hotels.geojson
+
+# Internal reports
+/reports/excel-profiling/
+/reports/kml-import/
+/reports/merge/
+/reports/pilot/

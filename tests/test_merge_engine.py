@@ -1,8 +1,8 @@
 from pathlib import Path
 
+from tools.merge_engine.engine import _enforce_one_to_one
 from tools.merge_engine.layer_config import load_layer_config
 from tools.merge_engine.models import MatchCandidate
-from tools.merge_engine.engine import _enforce_one_to_one
 
 
 def test_all_layer_configs_are_valid() -> None:

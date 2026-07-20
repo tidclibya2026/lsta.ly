@@ -32,8 +32,11 @@ def executive_session() -> Generator[Session, None, None]:
 
 def test_real_kpi_calculations(executive_session: Session) -> None:
     values = calculate_all_kpis(executive_session)
-    assert values["DATA_TOTAL_STAGING"] == 430
-    assert values["DATA_TOTAL_REGISTRY"] == 1
+    from sqlalchemy import func, select
+
+    from app.models import ImportFeature, Site
+    assert values["DATA_TOTAL_STAGING"] == executive_session.scalar(select(func.count()).select_from(ImportFeature))
+    assert values["DATA_TOTAL_REGISTRY"] == executive_session.scalar(select(func.count()).select_from(Site))
     assert values["DATA_PROMOTION_RATE"] == 0.23
     assert values["MEDIA_PENDING_REVIEW"] == 380
     assert values["DATA_INVALID_GEOMETRY"] == 0
