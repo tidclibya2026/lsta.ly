@@ -1,3 +1,7 @@
+from types import SimpleNamespace
+from uuid import uuid4
+
+from app.services import site_version_service
 from app.services.site_version_compare_service import compare_snapshots, flatten_snapshot
 
 
@@ -94,3 +98,15 @@ def test_compare_snapshots_handles_nested_changes() -> None:
     assert {item["field"] for item in result["changes"]} == {
         "profile.short_description_ar", "profile.verification_status",
     }
+
+
+def test_compare_versions_preserves_legacy_top_level_contract(monkeypatch) -> None:
+    versions = {
+        1: SimpleNamespace(snapshot={"name_ar": "لبدة", "status": "draft"}),
+        2: SimpleNamespace(snapshot={"name_ar": "لبدة الكبرى", "status": "draft"}),
+    }
+    monkeypatch.setattr(site_version_service, "get_version", lambda _session, _site_id, number: versions[number])
+
+    result = site_version_service.compare_versions(object(), uuid4(), 1, 2)
+
+    assert result == {"name_ar": {"before": "لبدة", "after": "لبدة الكبرى"}}

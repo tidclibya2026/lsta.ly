@@ -78,17 +78,11 @@ def compare_versions(
     first: int,
     second: int,
 ) -> dict[str, Any]:
-    """
-    Compatibility wrapper around the canonical recursive comparison service.
-
-    The local import avoids a circular import because
-    site_version_compare_service imports get_version from this module.
-    """
-    from app.services.site_version_compare_service import compare_site_versions
-
-    return compare_site_versions(
-        session,
-        site_id,
-        first,
-        second,
-    )
+    """Return the original top-level field-difference contract."""
+    left, right = get_version(session, site_id, first), get_version(session, site_id, second)
+    keys = set(left.snapshot) | set(right.snapshot)
+    return {
+        key: {"before": left.snapshot.get(key), "after": right.snapshot.get(key)}
+        for key in keys
+        if left.snapshot.get(key) != right.snapshot.get(key)
+    }

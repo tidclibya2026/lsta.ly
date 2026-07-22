@@ -1,6 +1,9 @@
-import argparse,json
+import argparse
+import json
 from pathlib import Path
-from sqlalchemy import create_engine,text
+
+from sqlalchemy import create_engine, text
+
 QUERIES={"sites":"atlas.sites","site_profiles":"atlas.site_profiles","site_versions":"atlas.site_versions","site_geometries":"atlas.site_geometries","quality_snapshots":"atlas.site_quality_snapshots","merge_proposals":"staging.merge_proposals","execution_batches":"staging.merge_execution_batches","execution_items":"staging.merge_execution_items","execution_events":"audit.merge_execution_events","promotion_records":"staging.promotion_records","publication_records":"atlas.publication_records"}
 def snapshot(url):
     with create_engine(url).connect() as c:return {k:c.scalar(text(f"SELECT count(*) FROM {v}")) for k,v in QUERIES.items()}
