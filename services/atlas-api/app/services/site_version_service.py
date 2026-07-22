@@ -71,7 +71,14 @@ def get_version(session: Session, site_id: uuid.UUID, version_number: int) -> Si
     return version
 
 
-def compare_versions(session: Session, site_id: uuid.UUID, first: int, second: int) -> dict[str, Any]:
+
+def compare_versions(
+    session: Session,
+    site_id: uuid.UUID,
+    first: int,
+    second: int,
+) -> dict[str, Any]:
+    """Return the original top-level field-difference contract."""
     left, right = get_version(session, site_id, first), get_version(session, site_id, second)
     keys = set(left.snapshot) | set(right.snapshot)
     return {

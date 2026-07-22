@@ -22,6 +22,7 @@ from app.models import (
 )
 from app.services.merge_proposal_import_service import import_merge_proposals
 from app.services.merge_review_query_service import bulk_decision_preview, get_merge_summary, submit_merge_decision
+from tests.merge_fixture import merge_input_paths
 
 ROOT = Path(__file__).resolve().parents[3]
 
@@ -42,12 +43,7 @@ def merge_session() -> Generator[Session, None, None]:
 
 
 def _inputs() -> dict[str, Path]:
-    return {
-        "excel_path": ROOT / "data/raw/excel/أطلس_ليبيا_السياحي_2026_طبقة_الفنادق.xlsx",
-        "kml_path": ROOT / "data/raw/kml/hotels_LY.kml",
-        "summary_path": ROOT / "reports/merge/hotels/hotels_kml_excel_match_summary.json",
-        "preview_path": ROOT / "reports/merge/hotels/hotels_merge_preview.json",
-    }
+    return merge_input_paths()
 
 
 def test_idempotent_import_and_no_registry_writes(merge_session: Session) -> None:

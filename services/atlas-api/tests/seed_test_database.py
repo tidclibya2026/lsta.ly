@@ -22,6 +22,7 @@ from app.models import (
 from app.services.import_old_tripoli_to_staging import import_old_tripoli
 from app.services.media_review_import_service import import_review_csv
 from app.services.merge_proposal_import_service import import_merge_proposals
+from tests.merge_fixture import merge_input_paths
 
 ROOT = Path(__file__).resolve().parents[3]
 
@@ -86,13 +87,7 @@ def _seed_sources(engine: Engine) -> None:
     with factory.begin() as session:
         import_review_csv(session, ROOT / "reports/media/old_tripoli_image_review.csv")
     with factory() as session:
-        import_merge_proposals(
-            session,
-            excel_path=ROOT / "data/raw/excel/أطلس_ليبيا_السياحي_2026_طبقة_الفنادق.xlsx",
-            kml_path=ROOT / "data/raw/kml/hotels_LY.kml",
-            summary_path=ROOT / "reports/merge/hotels/hotels_kml_excel_match_summary.json",
-            preview_path=ROOT / "reports/merge/hotels/hotels_merge_preview.json",
-        )
+        import_merge_proposals(session, **merge_input_paths())
 
 
 def _seed_registry(engine: Engine) -> None:
