@@ -40,6 +40,7 @@ from app.services.site_profile_service import (
     upsert_attribute,
 )
 from app.services.site_quality_snapshot_service import list_quality_snapshots
+from app.services.site_version_compare_service import compare_site_versions
 from app.services.site_version_service import create_version_snapshot, get_version, list_versions
 from app.services.spatial_relationship_service import (
     create_manual_relationship,
@@ -482,15 +483,54 @@ def relationships_summary(national_id: str, db: Session = Depends(get_db)) -> di
 def versions(national_id: str, db: Session = Depends(get_db)) -> list[dict[str, object]]:
     site = get_registry_site(db, national_id)
     return [
-        {"version_number": item.version_number, "change_summary": item.change_summary, "created_at": item.created_at}
+        {
+            "version_number": item.version_number,
+            "change_summary": item.change_summary,
+            "created_at": item.created_at,
+        }
         for item in list_versions(db, site.id)
     ]
 
 
-@router.get("/sites/{national_id}/versions/{version_number}")
-def version(national_id: str, version_number: int, db: Session = Depends(get_db)) -> dict[str, object]:
+@router.get("/sites/{national_id}/versions/compare")
+def compare_site_version_history(
+    national_id: str,
+    from_version: int = Query(..., ge=1),
+    to_version: int = Query(..., ge=1),
+    db: Session = Depends(get_db),
+) -> dict[str, object]:
     site = get_registry_site(db, national_id)
-    item = get_version(db, site.id, version_number)
+
+    try:
+        return compare_site_versions(
+            db,
+            site.id,
+            from_version,
+            to_version,
+        )
+    except LookupError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+
+@router.get("/sites/{national_id}/versions/{version_number}")
+def version(
+    national_id: str,
+    version_number: int,
+    db: Session = Depends(get_db),
+) -> dict[str, object]:
+    site = get_registry_site(db, national_id)
+
+    if version_number < 1:
+        raise HTTPException(
+            status_code=422,
+            detail="رقم الإصدار يجب أن يكون 1 أو أكبر",
+        )
+
+    try:
+        item = get_version(db, site.id, version_number)
+    except LookupError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+
     return {
         "version_number": item.version_number,
         "snapshot": item.snapshot,
