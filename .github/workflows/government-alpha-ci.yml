@@ -58,6 +58,7 @@ jobs:
         working-directory: services/atlas-api
     env:
       DATABASE_URL: postgresql+psycopg://lsta_test:lsta_test_password@localhost:5432/lsta_test
+      LSTA_TEST_DATABASE_URL: postgresql+psycopg://lsta_test:lsta_test_password@localhost:5432/lsta_test
       LSTA_ENV: test
     steps:
       - uses: actions/checkout@v4
